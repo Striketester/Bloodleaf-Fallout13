@@ -12,8 +12,8 @@
 			if(damage < 0) //we shouldn't be taking oxygen damage through this proc, but we'll let it heal.
 				adjustOxyLoss(damage * hit_percent)
 		//citadel code
-		if(AROUSAL)
-			adjustArousalLoss(damage * hit_percent)
+	/*	if(AROUSAL)
+			adjustArousalLoss(damage * hit_percent) */
 	return TRUE
 
 

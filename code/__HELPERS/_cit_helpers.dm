@@ -40,7 +40,7 @@ GLOBAL_LIST_INIT(dildo_colors, list(//mostly neon colors
 		"Orange"	= "#ff9a00",//orange
 		"Purple"	= "#e300ff"//purple
 		))
-
+/*
 /mob/living/carbon/proc/has_penis()
 	if(getorganslot("penis"))//slot shared with ovipositor
 		if(istype(getorganslot("penis"), /obj/item/organ/genital/penis))
@@ -74,7 +74,7 @@ GLOBAL_LIST_INIT(dildo_colors, list(//mostly neon colors
 		if(istype(getorganslot("balls"), /obj/item/organ/genital/eggsack))
 			return TRUE
 	return FALSE
-
+*/
 /mob/living/carbon/human/proc/is_bodypart_exposed(bodypart)
 
 /mob/living/carbon/proc/is_groin_exposed(var/list/L)
@@ -96,7 +96,7 @@ GLOBAL_LIST_INIT(dildo_colors, list(//mostly neon colors
 ////////////////////////
 //DANGER | DEBUG PROCS//
 ////////////////////////
-
+/*
 /client/proc/give_humans_genitals()
 	set name = "Mass Give Genitals"
 	set category = "Dangerous"
@@ -112,3 +112,4 @@ GLOBAL_LIST_INIT(dildo_colors, list(//mostly neon colors
 			H.give_vagina()
 			H.give_womb()
 			H.give_breasts()
+*/

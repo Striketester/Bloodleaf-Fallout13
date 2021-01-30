@@ -1,3 +1,4 @@
+/*
 /datum/species/angel
 	name = "Angel"
 	id = "angel"
@@ -143,3 +144,5 @@
 		override_float = FALSE
 		H.pass_flags &= ~PASSTABLE
 		H.CloseWings()
+
+*/

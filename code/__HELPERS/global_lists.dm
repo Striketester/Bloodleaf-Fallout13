@@ -31,7 +31,7 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/wings, GLOB.r_wings_list,roundstart = TRUE)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/caps, GLOB.caps_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings, GLOB.moth_wings_list)
-
+/*
 	//genitals
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/penis, GLOB.cock_shapes_list)
 	for(var/K in GLOB.cock_shapes_list)
@@ -55,6 +55,7 @@
 	for(var/K in GLOB.balls_shapes_list)
 		var/datum/sprite_accessory/testicles/value = GLOB.balls_shapes_list[K]
 		GLOB.balls_shapes_icons[K] = value.icon_state
+*/
 //END OF CIT CHANGES
 
 

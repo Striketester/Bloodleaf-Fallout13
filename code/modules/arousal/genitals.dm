@@ -1,3 +1,4 @@
+/*
 /obj/item/organ/genital
 	color = "#fcccb3"
 	w_class 					= WEIGHT_CLASS_NORMAL
@@ -30,7 +31,7 @@
 	if(!reagents)
 		create_reagents(fluid_max_volume)
 	update()
-	
+
 /obj/item/organ/genital/proc/set_aroused_state(new_state)
 	if(!(genital_flags & GENITAL_CAN_AROUSE))
 		return FALSE

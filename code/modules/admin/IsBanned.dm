@@ -39,7 +39,7 @@
 			return list("reason"="guest", "desc"="\nReason: Guests not allowed. Please sign in with a byond account.")
 		if (CONFIG_GET(flag/panic_bunker) && SSdbcore.Connect())
 			log_access("Failed Login: [key] - Guests not allowed during panic bunker")
-			return list("reason"="guest", "desc"="\nReason: You must be whitelisted to connect to Desert Rose. Please apply on our Discord: https://discord.gg/NGpP36ms")
+			return list("reason"="guest", "desc"="\nReason: You must be whitelisted to connect to Bloodleaf. Please apply on our Discord: https://discord.gg/NGpP36ms")
 
 	//Population Cap Checking
 	var/extreme_popcap = CONFIG_GET(number/extreme_popcap)

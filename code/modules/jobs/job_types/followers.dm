@@ -193,7 +193,7 @@ Practitioner
 	name = "Pharmacist"
 	suit = 		/obj/item/clothing/suit/toggle/labcoat/chemist
 	head = 		/obj/item/clothing/head/soft/mime
-	gloves = 	/obj/item/clothing/gloves/latexsleeves
+/*	gloves = 	/obj/item/clothing/gloves/latexsleeves */
 	glasses = 	/obj/item/clothing/glasses/science
 	backpack_contents = list(
 		/obj/item/flashlight/pen=1,

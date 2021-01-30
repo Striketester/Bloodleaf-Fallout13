@@ -128,7 +128,7 @@
 	taste_description = "strawberry roofies"
 	taste_mult = 2 //Hide the roofies in stronger flavors
 	color = "#FFADFF"//PINK, rgb(255, 173, 255)
-
+/*
 /datum/reagent/drug/aphrodisiac/on_mob_life(mob/living/M)
 	if(M && M.canbearoused && !HAS_TRAIT(M, TRAIT_CROCRIN_IMMUNE))
 		if(prob(33))
@@ -139,7 +139,7 @@
 			var/aroused_message = pick("You feel frisky.", "You're having trouble suppressing your urges.", "You feel in the mood.")
 			to_chat(M, "<span class='userlove'>[aroused_message]</span>")
 	..()
-
+*/
 /datum/reagent/drug/aphrodisiacplus
 	name = "Hexacrocin"
 	id = "aphro+"
@@ -150,7 +150,7 @@
 	color = "#FF2BFF"//dark pink
 	addiction_threshold = 20
 	overdose_threshold = 20
-
+/*
 /datum/reagent/drug/aphrodisiacplus/on_mob_life(mob/living/M)
 	if(M && M.canbearoused && !HAS_TRAIT(M, TRAIT_CROCRIN_IMMUNE))
 		if(prob(33))
@@ -168,7 +168,7 @@
 				aroused_message = pick("You feel a bit hot.", "You feel strong sexual urges.", "You feel in the mood.", "You're ready to go down on someone.")
 			to_chat(M, "<span class='userlove'>[aroused_message]</span>")
 	..()
-
+*/
 /datum/reagent/drug/aphrodisiacplus/addiction_act_stage2(mob/living/M)
 	if(prob(30))
 		M.adjustBrainLoss(2)
@@ -182,7 +182,7 @@
 	if(prob(30))
 		M.adjustBrainLoss(4)
 	..()
-
+/*
 /datum/reagent/drug/aphrodisiacplus/overdose_process(mob/living/M)
 	if(M && M.canbearoused && !HAS_TRAIT(M, TRAIT_CROCRIN_IMMUNE) && prob(33))
 		if(prob(5) && M.getArousalLoss() >= 100 && ishuman(M) && M.has_dna())
@@ -194,7 +194,7 @@
 			M.min_arousal += 1
 		M.adjustArousalLoss(2)
 	..()
-
+*/
 /datum/reagent/drug/anaphrodisiac
 	name = "Camphor"
 	id = "anaphro"
@@ -204,12 +204,12 @@
 	taste_mult = 2
 	color = "#D9D9D9"//rgb(217, 217, 217)
 	reagent_state = SOLID
-
+/*
 /datum/reagent/drug/anaphrodisiac/on_mob_life(mob/living/M)
 	if(M && M.canbearoused && prob(33))
 		M.adjustArousalLoss(-2)
 	..()
-
+*/
 /datum/reagent/drug/anaphrodisiacplus
 	name = "Hexacamphor"
 	id = "anaphro+"
@@ -218,7 +218,7 @@
 	color = "#D9D9D9"//rgb(217, 217, 217)
 	reagent_state = SOLID
 	overdose_threshold = 20
-
+/*
 /datum/reagent/drug/anaphrodisiacplus/on_mob_life(mob/living/M)
 	if(M && M.canbearoused && prob(33))
 		M.adjustArousalLoss(-4)
@@ -232,7 +232,7 @@
 			M.min_arousal -= 1
 		M.adjustArousalLoss(-2)
 	..()
-
+*/
 //recipes
 /datum/chemical_reaction/aphro
 	name = "crocin"

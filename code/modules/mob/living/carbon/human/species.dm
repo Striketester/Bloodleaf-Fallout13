@@ -289,7 +289,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			A.cure(FALSE)
 
 //CITADEL EDIT
-	if(NOAROUSAL in species_traits)
+/*	if(NOAROUSAL in species_traits)
 		C.canbearoused = FALSE
 	else
 		if(C.client)
@@ -298,6 +298,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		var/mob/living/carbon/human/H = C
 		if(NOGENITALS in H.dna.species.species_traits)
 			H.give_genitals(TRUE) //call the clean up proc to delete anything on the mob then return.
+	*/
 
 // EDIT ENDS
 
@@ -1499,8 +1500,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				H.adjustStaminaLoss(damage * hit_percent * H.physiology.stamina_mod)
 		if(BRAIN)
 			H.adjustBrainLoss(damage * hit_percent * H.physiology.brain_mod)
-		if(AROUSAL)											//Citadel edit - arousal
-			H.adjustArousalLoss(damage * hit_percent)
+/*		if(AROUSAL)											//Citadel edit - arousal
+			H.adjustArousalLoss(damage * hit_percent)*/
 	return 1
 
 /datum/species/proc/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)

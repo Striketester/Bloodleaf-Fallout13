@@ -1176,7 +1176,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 	message_admins("[key_name_admin(usr)] sent a tip of the round.")
 	log_admin("[key_name(usr)] sent \"[input]\" as the Tip of the Round.")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Tip")
-
+/*
 /proc/mass_purrbation()
 	for(var/M in GLOB.mob_list)
 		if(ishumanbasic(M))
@@ -1252,7 +1252,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 
 	if(!silent)
 		to_chat(H, "You are no longer a cat.")
-
+*/
 /client/proc/modify_goals()
 	set category = "Debug"
 	set name = "Modify goals"
@@ -1290,12 +1290,12 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 	if(!check_rights(R_FUN))
 		return
 
-	var/list/punishment_list = list(ADMIN_PUNISHMENT_LIGHTNING, 
-									ADMIN_PUNISHMENT_BRAINDAMAGE, 
-									ADMIN_PUNISHMENT_GIB, 
-									ADMIN_PUNISHMENT_BSA, 
-									ADMIN_PUNISHMENT_FIREBALL, 
-									ADMIN_PUNISHMENT_ROD, 
+	var/list/punishment_list = list(ADMIN_PUNISHMENT_LIGHTNING,
+									ADMIN_PUNISHMENT_BRAINDAMAGE,
+									ADMIN_PUNISHMENT_GIB,
+									ADMIN_PUNISHMENT_BSA,
+									ADMIN_PUNISHMENT_FIREBALL,
+									ADMIN_PUNISHMENT_ROD,
 									ADMIN_PUNISHMENT_SUPPLYPOD,
 									ADMIN_PUNISHMENT_PIE,
 									ADMIN_PUNISHMENT_CUSTOM_PIE)

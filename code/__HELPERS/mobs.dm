@@ -71,7 +71,7 @@
 	if(!GLOB.moth_wings_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings, GLOB.moth_wings_list)
 
-	//CIT CHANGES - genitals and such
+/*	//CIT CHANGES - genitals and such
 	if(!GLOB.cock_shapes_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/penis, GLOB.cock_shapes_list)
 	if(!GLOB.balls_shapes_list.len)
@@ -90,16 +90,16 @@
 
 	//For now we will always return none for tail_human and ears.
 	return(list("mcolor" = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"),
-		"tail_lizard" = pick(GLOB.tails_list_lizard), 
+		"tail_lizard" = pick(GLOB.tails_list_lizard),
 		"tail_human" = "None",
 		"wings" = "None",
 		"snout" = pick(GLOB.snouts_list),
 		"horns" = pick(GLOB.horns_list),
 		"ears" = "None", "frills" = pick(GLOB.frills_list),
-		"spines" = pick(GLOB.spines_list), 
-		"body_markings" = pick(GLOB.body_markings_list), 
-		"legs" = "Normal Legs", "caps" = pick(GLOB.caps_list), 
-		"moth_wings" = pick(GLOB.moth_wings_list), 
+		"spines" = pick(GLOB.spines_list),
+		"body_markings" = pick(GLOB.body_markings_list),
+		"legs" = "Normal Legs", "caps" = pick(GLOB.caps_list),
+		"moth_wings" = pick(GLOB.moth_wings_list),
 		"genitals_use_skintone"	= TRUE,
 		"exhibitionist" 	= FALSE,
 		"has_cock"			= FALSE,
@@ -149,7 +149,7 @@
 		"womb_efficiency"	= CUM_EFFICIENCY,
 		"womb_fluid" 		= "femcum",
 		"body_model"		= body_model))
-
+*/
 /proc/random_hair_style(gender)
 	switch(gender)
 		if(MALE)

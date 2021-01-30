@@ -181,7 +181,8 @@ SUBSYSTEM_DEF(mapping)
 	for (var/file in files)
 		var/full_path = "_maps/[path]/[file]"
 		var/datum/parsed_map/pm = loader.load_map(file(full_path), 1, 1, 1, cropMap=FALSE, measureOnly=TRUE)
-		var/bounds = pm?.bounds
+		var/list/bounds
+		bounds = pm?.bounds
 		files[file] = total_z  // save the start Z of this file
 		total_z += bounds[MAP_MAXZ] - bounds[MAP_MINZ] + 1
 

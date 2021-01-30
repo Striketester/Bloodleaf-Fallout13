@@ -138,4 +138,4 @@
 		mood_change = -2
 		return
 	mood_change = -2*(LAZYLEN(H.faction_deaths))
-	
+
