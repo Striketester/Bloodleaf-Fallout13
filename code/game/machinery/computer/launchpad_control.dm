@@ -1,8 +1,8 @@
 /obj/machinery/computer/launchpad
 	name = "\improper launchpad control console"
 	desc = "Used to teleport objects to and from a launchpad."
-	icon_screen = "teleport"
-	icon_keyboard = "teleport_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	circuit = /obj/item/circuitboard/computer/launchpad_console
 	var/sending = TRUE
 	var/current_pad //current pad viewed on the screen

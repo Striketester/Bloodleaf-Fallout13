@@ -1,8 +1,8 @@
 /obj/machinery/computer/station_alert
 	name = "station alert console"
 	desc = "Used to access the station's automated alert system."
-	icon_screen = "alert:0"
-	icon_keyboard = "atmos_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	circuit = /obj/item/circuitboard/computer/stationalert
 	var/alarms = list("Fire" = list(), "Atmosphere" = list(), "Power" = list())
 
@@ -84,4 +84,4 @@
 		if(L.len)
 			active_alarms = TRUE
 	if(active_alarms)
-		add_overlay("alert:2")
+		add_overlay("")

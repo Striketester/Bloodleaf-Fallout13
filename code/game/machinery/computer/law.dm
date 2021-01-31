@@ -2,7 +2,7 @@
 
 /obj/machinery/computer/upload
 	var/mob/living/silicon/current = null //The target of future law uploads
-	icon_screen = "command"
+	icon_screen = "terminal_on"
 
 /obj/machinery/computer/upload/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/aiModule))

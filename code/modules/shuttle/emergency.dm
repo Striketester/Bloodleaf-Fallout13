@@ -6,8 +6,8 @@
 /obj/machinery/computer/emergency_shuttle
 	name = "emergency shuttle console"
 	desc = "For shuttle control."
-	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	var/auth_need = 3
 	var/list/authorized = list()
 

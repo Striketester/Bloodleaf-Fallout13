@@ -19,8 +19,8 @@
 /obj/machinery/computer/scan_consolenew
 	name = "\improper DNA scanner access console"
 	desc = "Scan DNA."
-	icon_screen = "dna"
-	icon_keyboard = "med_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	density = TRUE
 	circuit = /obj/item/circuitboard/computer/scan_consolenew
 	var/radduration = 2

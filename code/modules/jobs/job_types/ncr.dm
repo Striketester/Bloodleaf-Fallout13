@@ -375,7 +375,7 @@ Corporal
 	/datum/outfit/loadout/specmedic, //Medkit, medHUD, patches, needler
 	/datum/outfit/loadout/speceng, //C4, toolbelt, welding goggles
 	/datum/outfit/loadout/specscout, //Scoped hunting rifle, binoculars
-	/datum/outfit/loadout/specmp, //Hunting shotgun, baton, beanbags
+//	/datum/outfit/loadout/specmp, //Hunting shotgun, baton, beanbags
 	///datum/outfit/loadout/specmech //Power armor, assault rifle
 	)
 
@@ -447,7 +447,7 @@ Corporal
 		/obj/item/ammo_box/a308=3,
 		/obj/item/twohanded/binocs=1
 		)
-
+/*
 /datum/outfit/loadout/specmp
 	name = "Military Police"
 	accessory = 	/obj/item/clothing/accessory/armband/black
@@ -461,7 +461,7 @@ Corporal
 		/obj/item/storage/box/rubbershot/beanbag = 1, \
 		/obj/item/melee/classic_baton=1
 	)
-
+*/
 /datum/outfit/loadout/specmech
 	name = "Mechanized"
 	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/ncr
@@ -530,7 +530,7 @@ NCR Heavy Trooper
 NCR Military Police
 */
 
-/*
+
 /datum/job/ncr/f13ncrmp
 	title = "NCR Military Police"
 	flag = F13NCRMP
@@ -563,7 +563,7 @@ NCR Military Police
 		/obj/item/storage/box/rubbershot = 1, \
 		/obj/item/storage/box/rubbershot/beanbag =1, \
 		)
-*/
+
 
 /*
 Trooper
@@ -627,7 +627,7 @@ Trooper
 /*
 Recruit
 */
-
+/*
 /datum/job/ncr/f13recruit
 	title = "NCR Recruit"
 	flag = F13RECRUIT
@@ -657,8 +657,9 @@ Recruit
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted)
-
+*/
 //NCR Administrator
+/*
 /datum/job/ncr/f13ncradmin
 	title = "NCR Administrator"
 	flag = F13NCRADMIN
@@ -685,7 +686,7 @@ Recruit
 		/obj/item/clipboard=1, \
 		/obj/item/stamp=1, \
 		/obj/item/stamp/denied=1)
-
+*/
 //NCR Citizen
 /datum/job/ncr/f13ncrcitizen
 	title = "NCR Citizen"

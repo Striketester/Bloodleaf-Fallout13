@@ -229,7 +229,7 @@ Practitioner
 /*
 Follower Volunteer
 */
-
+/*
 /datum/job/followers/f13followervolunteer
 	title = "Followers Volunteer"
 	flag = F13FOLLOWERVOLUNTEER
@@ -358,3 +358,4 @@ Follower Volunteer
 		/obj/item/storage/box/rubbershot/beanbag=1,
 		/obj/item/storage/box/lethalshot=1
 	)
+*/

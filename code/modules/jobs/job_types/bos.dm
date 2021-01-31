@@ -222,7 +222,7 @@ Head Scribe
 /*
 Knight-Captain
 */
-
+/*
 /datum/job/bos/f13knightcap
 	title = "Knight-Captain"
 	flag = F13KNIGHTCAPTAIN
@@ -308,11 +308,11 @@ Knight-Captain
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/gun/energy/laser/pistol=1
 		)
-
+*/
 /*
 Senior Paladin
 */
-
+/*
 /datum/job/bos/f13seniorpaladin
 	title = "Senior Paladin"
 	flag = F13SENIORPALADIN
@@ -369,7 +369,7 @@ Senior Paladin
 
 /datum/job/bos/f13seniorpaladin/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
-
+*/
 /*
 Paladin
 */
@@ -457,7 +457,7 @@ Paladin
 /*
 Senior Scribe
 */
-
+/*
 /datum/job/bos/f13seniorscribe
 	title = "Senior Scribe"
 	flag = F13SENIORSCRIBE
@@ -498,7 +498,7 @@ Senior Scribe
 		/obj/item/gun/energy/laser/pistol=1, \
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
 		/obj/item/reagent_containers/hypospray/CMO=1)
-
+*/
 /*
 Scribe
 */
@@ -562,7 +562,7 @@ Scribe
 /*
 Senior Knight
 */
-
+/*
 datum/job/bos/f13seniorknight
 	title = "Senior Knight"
 	flag = F13SENIORKNIGHT
@@ -624,7 +624,7 @@ datum/job/bos/f13seniorknight
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/gun/energy/laser/pistol=1
 		)
-
+*/
 /*
 Knight
 */
@@ -766,7 +766,7 @@ Initiate
 /*
 Off-Duty
 */
-
+/*
 /datum/job/bos/f13offdutybos
 	title = "Off-Duty"
 	flag = F13OFFDUTYBOS
@@ -815,7 +815,7 @@ Off-Duty
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 		/obj/item/encryptionkey/headset_bos=1,
 		)
-
+*/
 /*
 /datum/outfit/loadout/offa
 	name = "Junior Knight"

@@ -140,8 +140,8 @@
 /obj/machinery/computer/shuttle/snowdin/mining
 	name = "shuttle console"
 	desc = "A shuttle control computer."
-	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	shuttleId = "snowdin_mining"
 	possible_destinations = "snowdin_mining_top;snowdin_mining_down"

@@ -1,8 +1,8 @@
 /obj/machinery/computer/robotics
 	name = "robotics control console"
 	desc = "Used to remotely lockdown or detonate linked Cyborgs and Drones."
-	icon_screen = "robot"
-	icon_keyboard = "rd_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	req_access = list(ACCESS_ROBOTICS)
 	circuit = /obj/item/circuitboard/computer/robotics
 	var/temp = null

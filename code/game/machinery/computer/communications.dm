@@ -2,8 +2,8 @@
 /obj/machinery/computer/communications
 	name = "communications console"
 	desc = "A console used for high-priority announcements and emergencies."
-	icon_screen = "comm"
-	icon_keyboard = "tech_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	req_access = list(ACCESS_HEADS)
 	circuit = /obj/item/circuitboard/computer/communications
 	var/authenticated = 0

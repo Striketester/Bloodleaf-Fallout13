@@ -1,8 +1,8 @@
 /obj/machinery/computer/camera_advanced
 	name = "advanced camera console"
 	desc = "Used to access the various cameras in the Wasteland."
-	icon_screen = "cameras"
-	icon_keyboard = "security_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	var/list/z_lock = list() // Lock use to these z levels
 	var/lock_override = NONE
 	var/mob/camera/aiEye/remote/eyeobj

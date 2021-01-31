@@ -3,8 +3,8 @@
 /obj/machinery/computer/monitor
 	name = "power monitoring console"
 	desc = "It monitors power levels across the station."
-	icon_screen = "power"
-	icon_keyboard = "power_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_YELLOW
 	use_power = ACTIVE_POWER_USE
 	idle_power_usage = 20
