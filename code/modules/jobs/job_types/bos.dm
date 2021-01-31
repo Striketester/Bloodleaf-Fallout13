@@ -222,15 +222,15 @@ Head Scribe
 /*
 Knight-Captain
 */
-/*
+
 /datum/job/bos/f13knightcap
-	title = "Knight-Captain"
+	title = "Head-Paladin"
 	flag = F13KNIGHTCAPTAIN
 	head_announce = list("Security")
 	faction = "BOS"
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the Knight-Captain, head of the Knight division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
+	description = "You are the Head-Paladin, head of the Combat forces in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your combatants. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Sentinel"
@@ -260,34 +260,32 @@ Knight-Captain
 
 
 /datum/outfit/job/bos/f13knightcap
-	name = "Knight-Captain"
+	name = "Head-Paladin"
 	jobtype = /datum/job/bos/f13knightcap
 	gunsmith_one = TRUE
 	gunsmith_two = TRUE
 	gunsmith_three = TRUE
 	gunsmith_four = TRUE
 	pa_wear = TRUE
-	suit = 			/obj/item/clothing/suit/armor/f13/combat/knightcap
-	glasses =       /obj/item/clothing/glasses/night
-	uniform =		/obj/item/clothing/under/syndicate/brotherhood
-	accessory = 	/obj/item/clothing/accessory/bos/knightcaptain
-	belt = 			/obj/item/storage/belt/security/full
+	suit = 			/obj/item/clothing/suit/armor/f13/power_armor/t51b
+	head = 			/obj/item/clothing/head/helmet/f13/power_armor/t51b
+	accessory = 	/obj/item/clothing/accessory/bos/seniorpaladin
+	uniform = 		/obj/item/clothing/under/f13/recon
 	mask =			/obj/item/clothing/mask/gas/sechailer/swat
-	head =			/obj/item/clothing/head/helmet/f13/combat/knightcap
-	id = 			/obj/item/card/id/dogtag
+	belt = 			/obj/item/storage/belt/military/assault
 	backpack_contents = list(
-		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/melee/powerfist=1, \
 		)
 
 /datum/job/bos/f13knightcap/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Hard Yards")
 
 /datum/outfit/loadout/capstand
-	name = "Knight-Captain"
+	name = "Head-Paladin"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/aer14=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
+		/obj/item/stock_parts/cell/ammo/mfc=4,
 		/obj/item/ammo_box/magazine/m10mm_adv=2
 		)
 
@@ -295,7 +293,7 @@ Knight-Captain
 	name = "Close Support"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/ar=1,
-		/obj/item/ammo_box/magazine/m556=2,
+		/obj/item/ammo_box/magazine/m556=4,
 		/obj/item/gun/energy/laser/plasma/glock=1,
 		/obj/item/stock_parts/cell/ammo/ec=2
 		)
@@ -308,7 +306,7 @@ Knight-Captain
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/gun/energy/laser/pistol=1
 		)
-*/
+
 /*
 Senior Paladin
 */

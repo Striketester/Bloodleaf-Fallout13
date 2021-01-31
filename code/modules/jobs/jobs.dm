@@ -2,16 +2,16 @@ GLOBAL_LIST_INIT(command_positions, list(
     "Elder",
     "Head Scribe",
     "Sentinel",
-    "Knight-Captain",
+    "Head-Paladin",
 
     "Legion Centurion",
-    "Legion Orator",
-    "Legion Venator",
-    "Priestess of Mars",
+//    "Legion Orator",
+//    "Legion Venator",
+ //   "Priestess of Mars",
 
     "NCR Captain",
-    "NCR Ambassador",
-	"NCR Administrator",
+  //  "NCR Ambassador",
+//	"NCR Administrator",
 
     "Overseer",
     "Chief of Security",
@@ -35,25 +35,25 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
 "Elder",
 "Sentinel",
-"Knight-Captain",
+"Head-Paladin",
 "Head Scribe",
-"Senior Paladin",
+//"Senior Paladin",
 "Paladin",
-"Senior Knight",
+//"Senior Knight",
 "Knight",
-"Senior Scribe",
+//"Senior Scribe",
 "Scribe",
-"Off-Duty",
+//"Off-Duty",
 
 "Legion Centurion",
-"Legion Orator",
-"Legion Venator",
-"Priestess of Mars",
-"Legion Veteran Decanus",
+//"Legion Orator",
+//"Legion Venator",
+//"Priestess of Mars",
+//"Legion Veteran Decanus",
 "Veteran Legionary",
 "Legion Prime Decanus",
 "Prime Legionary",
-"Legion Recruit Decanus",
+//"Legion Recruit Decanus",
 "Legion Vexillarius",
 "Legion Scout",
 "Legion Slavemaster",
@@ -61,7 +61,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Auxilia",
 
 "NCR Captain",
-"NCR Ambassador",
+//"NCR Ambassador",
 "NCR Administrator",
 "NCR Lieutenant",
 "NCR Sergeant",
@@ -85,21 +85,21 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 ))
 
 GLOBAL_LIST_INIT(faction_player_positions, list(
-"Senior Paladin",
+//"Senior Paladin",
 "Paladin",
-"Senior Knight",
+//"Senior Knight",
 "Knight",
-"Senior Scribe",
+//"Senior Scribe",
 "Scribe",
-"Off-Duty",
+//"Off-Duty",
 
-"Legion Veteran Decanus",
+//"Legion Veteran Decanus",
 "Veteran Legionary",
 "Legion Prime Decanus",
 "Prime Legionary",
 "Legion Vexillarius",
-"Legion Recruit Decanus",
-"Legion Scout",
+//"Legion Recruit Decanus",
+//"Legion Scout",
 "Legion Slavemaster",
 "Legion Explorer",
 "Auxilia",
@@ -125,19 +125,19 @@ GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
 GLOBAL_LIST_INIT(brotherhood_command_positions, list(
 	"Elder",
 	"Sentinel",
-	"Knight-Captain",
+	"Head-Paladin",
 	"Head Scribe"
 ))
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
-	"Senior Paladin",
+//	"Senior Paladin",
 	"Paladin",
-	"Senior Knight",
+//	"Senior Knight",
 	"Knight",
-	"Senior Scribe",
+//	"Senior Scribe",
 	"Scribe",
-	"Initiate",
-	"Off-Duty"
+	"Initiate"
+//	"Off-Duty"
 ))
 
 GLOBAL_LIST_INIT(den_command_positions, list(
@@ -158,30 +158,30 @@ GLOBAL_LIST_INIT(den_positions, list(
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
-    "Legion Centurion",
-    "Legion Venator",
-    "Priestess of Mars",
-    "Legion Orator"
+    "Legion Centurion"
+//    "Legion Venator",
+//    "Priestess of Mars",
+//    "Legion Orator"
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(
-    "Legion Veteran Decanus",
+//    "Legion Veteran Decanus",
     "Veteran Legionary",
     "Legion Prime Decanus",
 	"Prime Legionary",
-	"Legion Recruit Decanus",
+//	"Legion Recruit Decanus",
     "Recruit Legionary",
     "Legion Vexillarius",
     "Legion Explorer",
     "Legion Slavemaster",
     "Auxilia",
-    "Camp Follower",
+//    "Camp Follower",
     "Legion Slave"
 ))
 
 GLOBAL_LIST_INIT(ncr_command_positions, list(
     "NCR Captain",
-    "NCR Ambassador",
+ //   "NCR Ambassador",
     "NCR Veteran Ranger"
 ))
 
@@ -203,9 +203,9 @@ GLOBAL_LIST_INIT(ncr_positions, list(
     "NCR Trooper",
     "NCR Patrol Ranger",
 	"NCR Scout Ranger",
-    "NCR Recruit",
-    "NCR Citizen",
-    "NCR Administrator"
+//    "NCR Recruit",
+    "NCR Citizen"
+//    "NCR Administrator"
 ))
 
 GLOBAL_LIST_INIT(vault_command_positions, list(
@@ -318,7 +318,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 
     EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman","Head Hunter")),
     EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Lead Practitioner")),
-  	EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Captain","NCR Ambassador"))
+  	EXP_TYPE_NCRCOMMAND    = list("titles" = list("NCR Lieutenant","NCR Sergeant","NCR Captain"))
   	// EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
     // EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
     // EXP_TYPE_COMMAND = list("titles" = command_positions),

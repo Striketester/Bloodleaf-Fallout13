@@ -429,7 +429,7 @@
 	weapon_weight = WEAPON_LIGHT
 	extra_damage = -5 //Smaller barrel, smaller bullet velocity
 	extra_penetration = -5 //See above
-	spread = 10 
+	spread = 10
 
 /obj/item/gun/ballistic/revolver/colt357
 	name = "\improper .357 magnum revolver"
