@@ -1,7 +1,7 @@
 /obj/machinery/computer
 	name = "computer"
 	icon = 'icons/obj/computer.dmi'
-	icon_state = "computer"
+	icon_state = "terminal"
 	density = TRUE
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 300
@@ -12,8 +12,8 @@
 	barricade = TRUE
 	proj_pass_rate = 65
 	var/brightness_on = 2
-	var/icon_keyboard = "generic_key"
-	var/icon_screen = "generic"
+	var/icon_keyboard = ""
+	var/icon_screen = "terminal_on"
 	var/clockwork = FALSE
 
 /obj/machinery/computer/Initialize(mapload, obj/item/circuitboard/C)

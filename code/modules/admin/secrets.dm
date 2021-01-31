@@ -390,7 +390,7 @@
 			for(var/obj/machinery/light/L in GLOB.machines)
 				L.break_light_tube()
 
-		if("anime")
+/*		if("anime")
 			if(!check_rights(R_FUN))
 				return
 			var/animetype = alert("Would you like to have the clothes be changed?",,"Yes","No","Cancel")
@@ -429,7 +429,7 @@
 							I.item_flags |= NODROP
 				else
 					to_chat(H, "You're not kawaii enough for this.")
-
+*/
 		if("whiteout")
 			if(!check_rights(R_FUN))
 				return
@@ -569,7 +569,7 @@
 			J.spawn_positions = -1
 			message_admins("[key_name_admin(usr)] has removed the cap on security officers.")
 
-		if("ctfbutton")
+	/*	if("ctfbutton")
 			if(!check_rights(R_ADMIN))
 				return
 			toggle_all_ctf(usr)
@@ -586,7 +586,7 @@
 			mass_remove_purrbation()
 			message_admins("[key_name_admin(usr)] has removed everyone from \
 				purrbation.")
-			log_admin("[key_name(usr)] has removed everyone from purrbation.")
+			log_admin("[key_name(usr)] has removed everyone from purrbation.") */
 
 		if("flipmovement")
 			if(!check_rights(R_FUN))

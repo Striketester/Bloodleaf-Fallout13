@@ -10,7 +10,7 @@
 	verbs += /mob/living/proc/mob_sleep
 	verbs += /mob/living/proc/lay_down
 	verbs += /mob/living/proc/surrender
-	verbs += /mob/living/carbon/human/proc/underwear_toggle //fwee
+//	verbs += /mob/living/carbon/human/proc/underwear_toggle
 
 	//initialize limbs first
 	create_bodyparts()
@@ -1046,7 +1046,7 @@
 
 /mob/living/carbon/human/proc/despawn()
 	var/datum/job/job_to_free = SSjob.GetJob(job)
-	job_to_free?.current_positions--
+	job_to_free.current_positions--
 	GLOB.data_core.remove_record_by_name(real_name)
 	var/dat = "[key_name(src)] has despawned as [src], job [job], in [AREACOORD(src)]. Contents despawned along:"
 	for(var/i in contents)
@@ -1073,10 +1073,10 @@
 
 /mob/living/carbon/human/species/android
 	race = /datum/species/android
-
+/*
 /mob/living/carbon/human/species/angel
 	race = /datum/species/angel
-
+*/
 /mob/living/carbon/human/species/corporate
 	race = /datum/species/corporate
 

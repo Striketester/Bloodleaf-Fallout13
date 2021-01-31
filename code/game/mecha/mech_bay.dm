@@ -70,8 +70,8 @@
 /obj/machinery/computer/mech_bay_power_console
 	name = "mech bay power control console"
 	desc = "Displays the status of mechs connected to the recharge station."
-	icon_screen = "recharge_comp"
-	icon_keyboard = "rd_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	circuit = /obj/item/circuitboard/computer/mech_bay_power_console
 	var/obj/machinery/mech_bay_recharge_port/recharge_port
 	light_color = LIGHT_COLOR_PINK

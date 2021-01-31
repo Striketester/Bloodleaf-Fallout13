@@ -105,7 +105,7 @@
 	if(. && isliving(user))
 		var/mob/living/L = user
 		L.SetSleeping(200)
-
+/*
 /datum/emote/living/flap
 	key = "flap"
 	key_third_person = "flaps"
@@ -132,7 +132,7 @@
 	message = "flaps their wings ANGRILY!"
 	restraint_check = TRUE
 	wing_time = 10
-
+*/
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"

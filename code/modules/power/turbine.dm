@@ -60,8 +60,8 @@
 /obj/machinery/computer/turbine_computer
 	name = "gas turbine control computer"
 	desc = "A computer to remotely control a gas turbine."
-	icon_screen = "turbinecomp"
-	icon_keyboard = "tech_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	circuit = /obj/item/circuitboard/computer/turbine_computer
 	var/obj/machinery/power/compressor/compressor
 	var/id = 0

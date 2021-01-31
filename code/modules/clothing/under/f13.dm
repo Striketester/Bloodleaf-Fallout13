@@ -71,6 +71,12 @@
 	icon_state = "ncrcf"
 	item_state = "ncrcf"
 	item_color = "ncrcf"
+/obj/item/clothing/under/f13/ncrcf/jacket
+	name = "NCRCF fatigues"
+	desc = "A set of cheap, worn-in blue dress shirt and slacks and jacket. Emblazened on the back are the initials of the NCR Correctional Facility, as a meek reminder of who owns you."
+	icon_state = "ncrcf_jacket"
+	item_state = "ncrcf_jacket"
+	item_color = "ncrcf_jacket"
 
 //Settlers
 

@@ -91,7 +91,6 @@
 					CLONE:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=clone'>[M.getCloneLoss()]</a>
 					BRAIN:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=brain'>[M.getBrainLoss()]</a>
 					STAMINA:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=stamina'>[M.getStaminaLoss()]</a>
-					AROUSAL:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=arousal'>[M.getArousalLoss()]</a>
 				</font>
 			"}
 		else
@@ -1247,7 +1246,7 @@
 				to_chat(usr, "Mob doesn't exist anymore")
 				return
 
-			var/success = purrbation_toggle(H)
+		/*	var/success = purrbation_toggle(H)
 			if(success)
 				to_chat(usr, "Put [H] on purrbation.")
 				log_admin("[key_name(usr)] has put [key_name(H)] on purrbation.")
@@ -1261,7 +1260,7 @@
 				var/msg = "<span class='notice'>[key_name_admin(usr)] has removed [key_name(H)] from purrbation.</span>"
 				message_admins(msg)
 				admin_ticket_log(H, msg)
-
+*/
 		else if(href_list["adjustDamage"] && href_list["mobToDamage"])
 			if(!check_rights(NONE))
 				return
@@ -1292,9 +1291,9 @@
 				if("oxygen")
 					L.adjustOxyLoss(amount)
 					newamt = L.getOxyLoss()
-				if("arousal")
+				/*if("arousal")
 					L.adjustArousalLoss(amount)
-					newamt = L.getArousalLoss()
+					newamt = L.getArousalLoss() */
 				if("brain")
 					L.adjustBrainLoss(amount)
 					newamt = L.getBrainLoss()

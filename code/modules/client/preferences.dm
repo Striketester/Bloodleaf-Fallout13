@@ -2323,7 +2323,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		save_character()
 	character.set_species(chosen_species, icon_update = FALSE)
 
-	character.give_genitals(TRUE) //character.update_genitals() is already called on genital.update_appearance()
+/*	character.give_genitals(TRUE) character.update_genitals() is already called on genital.update_appearance()
+*/
 
 	SEND_SIGNAL(character, COMSIG_HUMAN_PREFS_COPIED_TO, src, icon_updates, roundstart_checks)
 

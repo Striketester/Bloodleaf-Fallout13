@@ -1,3 +1,4 @@
+/*
 #define CUM_TARGET_THROAT_FUNCLAW "throat"
 #define CUM_TARGET_VAGINA_FUNCLAW "vagina"
 #define CUM_TARGET_ANUS_FUNCLAW "anus"
@@ -135,4 +136,4 @@
 				"<span class='userdanger'>\The [src]</b> tears off \the [M]'s clothes!</span>", null, COMBAT_MESSAGE_RANGE)
 		return TRUE
 	return FALSE
-
+*/

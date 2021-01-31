@@ -608,7 +608,7 @@
 	moduleselect_icon = "malf"
 	can_be_pushed = FALSE
 	hat_offset = 3
-
+/*
 //SexBot module begin
 /obj/item/robot_module/fisto_protectron
 	name = "Fisto"
@@ -639,7 +639,7 @@
 /obj/item/reagent_containers/spray/sexborg_oil
 	name = "oil spray"
 	list_reagents = list("cooking_oil" = 250)
-
+*/
 //module end
 
 /datum/robot_energy_storage

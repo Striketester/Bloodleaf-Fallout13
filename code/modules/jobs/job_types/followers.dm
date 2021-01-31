@@ -193,7 +193,7 @@ Practitioner
 	name = "Pharmacist"
 	suit = 		/obj/item/clothing/suit/toggle/labcoat/chemist
 	head = 		/obj/item/clothing/head/soft/mime
-	gloves = 	/obj/item/clothing/gloves/latexsleeves
+/*	gloves = 	/obj/item/clothing/gloves/latexsleeves */
 	glasses = 	/obj/item/clothing/glasses/science
 	backpack_contents = list(
 		/obj/item/flashlight/pen=1,
@@ -229,7 +229,7 @@ Practitioner
 /*
 Follower Volunteer
 */
-
+/*
 /datum/job/followers/f13followervolunteer
 	title = "Followers Volunteer"
 	flag = F13FOLLOWERVOLUNTEER
@@ -358,3 +358,4 @@ Follower Volunteer
 		/obj/item/storage/box/rubbershot/beanbag=1,
 		/obj/item/storage/box/lethalshot=1
 	)
+*/

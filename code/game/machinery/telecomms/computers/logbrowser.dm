@@ -2,7 +2,7 @@
 
 /obj/machinery/computer/telecomms/server
 	name = "telecommunications server monitoring console"
-	icon_screen = "comm_logs"
+	icon_screen = "terminal_on"
 	desc = "Has full access to all details and record of the telecommunications network it's monitoring."
 
 	var/screen = 0				// the screen number:

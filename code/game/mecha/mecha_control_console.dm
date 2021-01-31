@@ -1,8 +1,8 @@
 /obj/machinery/computer/mecha
 	name = "exosuit control console"
 	desc = "Used to remotely locate or lockdown exosuits."
-	icon_screen = "mecha"
-	icon_keyboard = "tech_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	req_access = list(ACCESS_ROBOTICS)
 	circuit = /obj/item/circuitboard/computer/mecha_control
 	var/list/located = list()

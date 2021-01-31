@@ -517,21 +517,6 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		qdel(query_client_in_db)
 		return
 	if(!query_client_in_db.NextRow())
-		if (CONFIG_GET(flag/panic_bunker) && !holder && !GLOB.deadmins[ckey] && !(ckey in GLOB.bunker_passthrough))
-			log_access("Failed Login: [key] - New account attempting to connect during panic bunker")
-			message_admins("<span class='adminnotice'>Failed Login: [key] - New account attempting to connect during panic bunker</span>")
-			to_chat(src, "You must be whitelisted to connect to Desert Rose. Please apply on our Discord: https://discord.gg/NGpP36ms.")
-			var/list/connectiontopic_a = params2list(connectiontopic)
-			var/list/panic_addr = CONFIG_GET(string/panic_server_address)
-			if(panic_addr && !connectiontopic_a["redirect"])
-				var/panic_name = CONFIG_GET(string/panic_server_name)
-				to_chat(src, "<span class='notice'>Sending you to [panic_name ? panic_name : panic_addr].</span>")
-				winset(src, null, "command=.options")
-				src << link("[panic_addr]?redirect=1")
-			qdel(query_client_in_db)
-			qdel(src)
-			return
-
 		new_player = 1
 		account_join_date = sanitizeSQL(findJoinDate())
 		var/datum/DBQuery/query_add_player = SSdbcore.NewQuery("INSERT INTO [format_table_name("player")] (`ckey`, `firstseen`, `firstseen_round_id`, `lastseen`, `lastseen_round_id`, `ip`, `computerid`, `lastadminrank`, `accountjoindate`) VALUES ('[sql_ckey]', Now(), '[GLOB.round_id]', Now(), '[GLOB.round_id]', INET_ATON('[sql_ip]'), '[sql_computerid]', '[sql_admin_rank]', [account_join_date ? "'[account_join_date]'" : "NULL"])")

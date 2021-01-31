@@ -1,4 +1,5 @@
 //Mob vars
+/*
 /mob/living
 	var/arousalloss = 0									//How aroused the mob is.
 	var/min_arousal = AROUSAL_MINIMUM_DEFAULT			//The lowest this mobs arousal will get. default = 0
@@ -9,9 +10,9 @@
 	var/mb_cd_length = 120 SECONDS						//5 second cooldown for masturbating because fuck spam.
 	var/mb_cd_timer = 50									//The timer itself
 
-
+*/
 /mob/living/carbon/human
-	canbearoused = FALSE
+//	canbearoused = FALSE
 
 	var/saved_underwear = ""//saves their underwear so it can be toggled later
 	var/saved_undershirt = ""
@@ -25,7 +26,7 @@
 	saved_underwear = underwear
 	saved_undershirt = undershirt
 	saved_socks	=	socks
-
+/*
 //Species vars
 /datum/species
 	var/arousal_gain_rate = AROUSAL_START_VALUE //Rate at which this species becomes aroused
@@ -80,7 +81,7 @@
 						amt_nude++
 				if(amt_nude)
 					var/watchers = 0
-					for(var/mob/_M in view(world.view, src)) 
+					for(var/mob/_M in view(world.view, src))
 						var/mob/living/M = _M
 						if(!istype(M))
 							continue
@@ -662,3 +663,4 @@
 	set name = "Climax"
 	set desc = "Lets you choose a couple ways to ejaculate."
 	mob_climax()
+*/

@@ -255,14 +255,14 @@
 	name = "solar panel control"
 	desc = "A controller for solar panel arrays."
 	icon = 'icons/obj/computer.dmi'
-	icon_state = "computer"
+	icon_state = "terminal"
 	density = TRUE
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 250
 	max_integrity = 200
 	integrity_failure = 100
-	var/icon_screen = "solar"
-	var/icon_keyboard = "power_key"
+	var/icon_screen = "terminal_on"
+	var/icon_keyboard = ""
 	var/id = 0
 	var/currentdir = 0
 	var/targetdir = 0		// target angle in manual tracking (since it updates every game minute)

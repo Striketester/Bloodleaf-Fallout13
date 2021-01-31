@@ -147,7 +147,7 @@ Centurion
 	head = 			/obj/item/clothing/head/helmet/f13/legion/rangercent
 	suit_store = /obj/item/gun/ballistic/shotgun/antimateriel
 	backpack_contents = list(
-		/obj/item/ammo_box/a50MG=2,	
+		/obj/item/ammo_box/a50MG=2,
 		/obj/item/gun/ballistic/automatic/pistol/deagle=1,
 		/obj/item/ammo_box/magazine/a50=3)
 
@@ -164,7 +164,7 @@ Centurion
 /*
 Orator
 */
-
+/*
 /datum/job/CaesarsLegion/Legionnaire/f13orator
 	title = "Legion Orator"
 	flag = F13ORATOR
@@ -196,11 +196,11 @@ Orator
 	if(visualsOnly)
 		return
 	H.add_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC)
-
+*/
 /*
 Priestess of Mars
 */
-
+/*
 /datum/job/CaesarsLegion/f13priestess
 	title = "Priestess of Mars"
 	flag = F13PRIESTESS
@@ -246,7 +246,7 @@ Priestess of Mars
 /datum/job/CaesarsLegion/f13priestess/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Spiritual")
 
-
+*/
 /* Decanus
 /datum/job/CaesarsLegion/Legionnaire/f13decan
 	title = "Legion Decanus"
@@ -324,6 +324,7 @@ Decanii
 
 
 //Veteran Decanus
+/*
 /datum/job/CaesarsLegion/Legionnaire/f13decanvet
 	title = "Legion Veteran Decanus"
 	flag = F13DECANVET
@@ -367,7 +368,7 @@ Decanii
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
 
-
+*/
 //Prime Decanus
 /datum/job/CaesarsLegion/Legionnaire/f13decan
 	title = "Legion Prime Decanus"
@@ -416,6 +417,7 @@ Decanii
 
 
 //Recruit Decanus
+/*
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec
 	title = "Legion Recruit Decanus"
 	flag = F13DECANREC
@@ -459,7 +461,7 @@ Decanii
 		/obj/item/key/scollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
-
+*/
 
 /*
 Vexillarius
@@ -631,7 +633,7 @@ Veteran Legionary
 	name = "Protector Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/d12g=2, 
+		/obj/item/ammo_box/magazine/d12g=2,
 		)
 
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -759,6 +761,7 @@ Recruit Legionary
 /*
 Venator
 */
+/*
 /datum/job/CaesarsLegion/Legionnaire/f13venator
 	title = "Legion Venator"
 	flag = F13VENATOR
@@ -814,7 +817,7 @@ Venator
 		/obj/item/ammo_box/magazine/m12g=2,
 		/obj/item/claymore/machete/gladius=1,
 		/obj/item/grenade/plastic=1)
-
+*/
 /*
 Explorer
 */

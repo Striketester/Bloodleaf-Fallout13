@@ -203,7 +203,7 @@
 	name = "satchel"
 	desc = "A trendy looking satchel."
 	icon_state = "satchel-norm"
-	species_exception = list(/datum/species/angel) //satchels can be equipped since they are on the side, not back
+//	species_exception = list(/datum/species/angel) //satchels can be equipped since they are on the side, not back
 
 /obj/item/storage/backpack/satchel/leather
 	name = "leather satchel"
@@ -585,7 +585,7 @@
 	new /obj/item/clothing/mask/gas/clown_hat(src)
 	new /obj/item/bikehorn(src)
 	new /obj/item/implanter/sad_trombone(src)
-	
+
 /obj/item/storage/backpack/backsheath
 	name = "back sheath"
 	desc = "A sheath that allows you to hold a sword on your back. It even has a pouch for your basic storage needs, how cool is that?"

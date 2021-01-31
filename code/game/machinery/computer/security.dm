@@ -1,8 +1,8 @@
 /obj/machinery/computer/secure_data//TODO:SANITY
 	name = "security records console"
 	desc = "Used to view and edit personnel's security records."
-	icon_screen = "security"
-	icon_keyboard = "security_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	req_one_access = list(ACCESS_SECURITY, ACCESS_FORENSICS_LOCKERS)
 	circuit = /obj/item/circuitboard/computer/secure_data
 	var/obj/item/card/id/scan = null
@@ -57,7 +57,7 @@
 /obj/machinery/computer/secure_data/ui_interact(mob/user)
 	. = ..()
 	if(src.z > 6)
-		to_chat(user, "<span class='boldannounce'>Unable to establish a connection</span>: \black You're too far away from the station!")
+		to_chat(user, "<span class='boldannounce'>Unable to establish a connection</span>: \black You're too far away from a records server!")
 		return
 	var/dat
 

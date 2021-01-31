@@ -17,8 +17,8 @@ Nothing else in the console has ID requirements.
 /obj/machinery/computer/rdconsole
 	name = "R&D Console"
 	desc = "A console used to interface with R&D tools."
-	icon_screen = "rdcomp"
-	icon_keyboard = "rd_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	var/datum/techweb/stored_research //Reference to global science techweb.
 	var/obj/item/disk/tech_disk/t_disk	//Stores the technology disk.
 	var/obj/item/disk/design_disk/d_disk	//Stores the design disk.
@@ -1030,8 +1030,8 @@ Nothing else in the console has ID requirements.
 		if(!L.has_trait(TRAIT_TECHNOPHREAK, TRAIT_GENERIC))
 			to_chat(user, "<span class='warning'>The array of simplistic button pressing confuses you. Besides, did you really want to spend all day staring at a screen?</span>")
 			return
-			
-	
+
+
 	var/datum/browser/popup = new(user, "rndconsole", name, 900, 600)
 	popup.add_stylesheet("techwebs", 'html/browser/techwebs.css')
 	popup.set_content(generate_ui())
