@@ -52,8 +52,8 @@ Colonel
 	shoes       = /obj/item/clothing/shoes/f13/military/ncr_officer
 	gloves      = /obj/item/clothing/gloves/f13/leather/ncr_officer
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m45=3, \
-		/obj/item/ammo_box/magazine/m556/rifle=2, \
+		/obj/item/ammo_box/magazine/m45=4, \
+		/obj/item/ammo_box/magazine/m556/rifle=4, \
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/gun/ballistic/automatic/pistol/m1911=1, \
 		/obj/item/melee/classic_baton/telescopic=1, \
@@ -128,12 +128,12 @@ Captain
 	belt = 		/obj/item/storage/belt/military/assault/ncr
 	l_hand = 	/obj/item/gun/ballistic/automatic/marksman/servicerifle/r82
 	backpack_contents = list(
-	/obj/item/ammo_box/magazine/m556/rifle/assault=2)
+	/obj/item/ammo_box/magazine/m556/rifle/assault=6)
 
 /*
 Ambassador
 */
-
+/*
 /datum/job/ncr/f13ambassador
 	title = "NCR Ambassador"
 	flag = F13AMBASSADOR
@@ -163,7 +163,7 @@ Ambassador
 		/obj/item/melee/classic_baton/telescopic=1, \
 		/obj/item/storage/bag/money/small/ncr=1,
 		/obj/item/megaphone=1)
-
+*/
 /*
 Lieutenant
 */
@@ -183,8 +183,8 @@ Lieutenant
 	loadout_options = list(
 	/datum/outfit/loadout/ltmedic, //Grease gun, meds
 	/datum/outfit/loadout/ltinf, //Assault carbine, extra ammo
-	/datum/outfit/loadout/ltscout, //DKS, trekking
-	/datum/outfit/loadout/ltmp // Pump riot, baton, beanbags
+	/datum/outfit/loadout/ltscout //DKS, trekking
+//	/datum/outfit/loadout/ltmp // Pump riot, baton, beanbags
 	)
 
 /datum/outfit/job/ncr/f13lieutenant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -236,7 +236,7 @@ Lieutenant
 	suit_store = 	/obj/item/gun/ballistic/automatic/assault_carbine
 	belt = 			/obj/item/storage/belt/military/NCR_Bandolier
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=3,
+		/obj/item/ammo_box/magazine/m556/rifle/assault=6,
 		/obj/item/book/granter/trait/trekking=1)
 
 /datum/outfit/loadout/ltscout
@@ -251,7 +251,7 @@ Lieutenant
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308=3,
 		/obj/item/book/granter/trait/trekking=1)
-
+/*
 /datum/outfit/loadout/ltmp
 	name = "Military Police"
 	accessory = 	/obj/item/clothing/accessory/armband/black
@@ -265,7 +265,7 @@ Lieutenant
 		/obj/item/storage/box/rubbershot/beanbag = 1, \
 		/obj/item/melee/classic_baton= 1
 	)
-
+*/
 /*
 Sergeant
 */
@@ -285,7 +285,7 @@ Sergeant
 	loadout_options = list(
 	/datum/outfit/loadout/sgtinf, //Service rifle, extra ammo
 	/datum/outfit/loadout/sgtscout, //Marksman rifle
-	/datum/outfit/loadout/sgtmp, //Drum riot shotgun, baton, beanbags
+//	/datum/outfit/loadout/sgtmp, //Drum riot shotgun, baton, beanbags
 	/datum/outfit/loadout/sgtmech //Salvaged power armor, LMG
 	)
 
@@ -316,9 +316,9 @@ Sergeant
 	belt = 			/obj/item/storage/belt/military/NCR_Bandolier
 	head = 			/obj/item/clothing/head/f13/ncr
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault=5
+		/obj/item/ammo_box/magazine/m556/rifle/assault=6
 	)
-
+/*
 /datum/outfit/loadout/sgtmp
 	name = "Military Police"
 	accessory = 	/obj/item/clothing/accessory/ncr/SGT
@@ -334,7 +334,7 @@ Sergeant
 		/obj/item/storage/box/rubbershot/beanbag = 1, \
 		/obj/item/melee/classic_baton= 1
 	)
-
+*/
 /datum/outfit/loadout/sgtscout
 	name = "Scout"
 	accessory = 	/obj/item/clothing/accessory/ncr/SSGT
@@ -346,7 +346,7 @@ Sergeant
 	belt = 			/obj/item/storage/belt/military/NCR_Bandolier
 	uniform = 		/obj/item/clothing/under/f13/ncr/scout
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=3)
+		/obj/item/ammo_box/magazine/m556/rifle=4)
 
 /datum/outfit/loadout/sgtmech
 	name = "Mechanized"
@@ -429,7 +429,7 @@ Corporal
 		/obj/item/grenade/plastic=1,
 		/obj/item/stack/sheet/metal/fifty=2,
 		/obj/item/stack/sheet/glass/fifty=1,
-		/obj/item/ammo_box/magazine/m556/rifle=2,
+		/obj/item/ammo_box/magazine/m556/rifle=4,
 		/obj/item/book/granter/trait/techno
 		)
 
@@ -470,7 +470,7 @@ Corporal
 	suit_store = 	/obj/item/gun/ballistic/automatic/assault_rifle
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault = 2, \
+		/obj/item/ammo_box/magazine/m556/rifle/assault = 4, \
 		/obj/item/book/granter/trait/trekking=1,
 	)
 /*
@@ -573,8 +573,8 @@ Trooper
 	title = "NCR Trooper"
 	flag = F13TROOPER
 	faction = "NCR"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 10
+	spawn_positions = 10
 	description = "You are considered the backbone and workforce strength of the NCR Army. You answer to everyone above you in the chain of command, taking orders from your Sergeant directly and obeying all commands given by officers such as the Lieutenant and Captain."
 	supervisors = "Corporals and above"
 	selection_color = "#fff5cc"
@@ -607,7 +607,7 @@ Trooper
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/storage/bag/money/small/ncrenlisted, \
 		/obj/item/clothing/mask/ncr_facewrap, \
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle=4)
 
 /*
 /datum/outfit/loadout/trooperfrontline

@@ -324,7 +324,6 @@ Decanii
 
 
 //Veteran Decanus
-/*
 /datum/job/CaesarsLegion/Legionnaire/f13decanvet
 	title = "Legion Veteran Decanus"
 	flag = F13DECANVET
@@ -367,9 +366,8 @@ Decanii
 		/obj/item/key/scollar=1, \
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
-
-*/
 //Prime Decanus
+/*
 /datum/job/CaesarsLegion/Legionnaire/f13decan
 	title = "Legion Prime Decanus"
 	flag = F13DECAN
@@ -415,7 +413,7 @@ Decanii
 		/obj/item/assembly/signaler/electropack/shockcollar=1, \
 		/obj/item/storage/bag/money/small/legofficers)
 
-
+*/
 //Recruit Decanus
 /*
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec
@@ -554,9 +552,9 @@ datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	name = "Legion Slavemaster"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	id =			/obj/item/card/id/dogtag/legslavemaster
-	uniform =		/obj/item/clothing/under/gladiator
+	uniform =		/obj/item/clothing/under/f13/legskirt
 	belt = 			/obj/item/melee/curator_whip
-	head = 			/obj/item/clothing/head/helmet/gladiator
+	head = 			/obj/item/clothing/head/helmet/f13/legion/prime/decan
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	ears	=		/obj/item/radio/headset/headset_legion
 	backpack_contents = list(
@@ -618,7 +616,7 @@ Veteran Legionary
 	name = "Assault Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/smg10mm
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm_auto=3,
+		/obj/item/ammo_box/magazine/m10mm_auto=4,
 		/obj/item/shield/riot/roman=1
 		)
 
@@ -626,14 +624,14 @@ Veteran Legionary
 	name = "Ranged Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=3,
+		/obj/item/ammo_box/magazine/m556/rifle=4,
 		)
 
 /datum/outfit/loadout/vetlegclose
 	name = "Protector Legionary"
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/d12g=2,
+		/obj/item/ammo_box/magazine/d12g=3,
 		)
 
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
@@ -689,21 +687,21 @@ Prime Legionary
 	backpack_contents = list(
 		/obj/item/storage/backpack/spearquiver=1, \
 		/obj/item/claymore/machete/reinforced=1, \
-		/obj/item/ammo_box/magazine/m556/rifle=2)
+		/obj/item/ammo_box/magazine/m556/rifle=4)
 
 /datum/outfit/loadout/legline
 	name = "Lineman"
 	suit_store = /obj/item/twohanded/spear
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99/pers/glock=1, \
-		/obj/item/ammo_box/magazine/m10mm_auto=3, \
+		/obj/item/ammo_box/magazine/m10mm_auto=4, \
 		/obj/item/claymore/machete/reinforced=1)
 
 /datum/outfit/loadout/legbreach
 	name = "Close Quarters Legionary"
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
-		/obj/item/storage/box/slugshot=1, \
+		/obj/item/storage/box/slugshot=2, \
 		/obj/item/storage/box/beanbag=1, \
 		/obj/item/claymore/machete/gladius=1)
 
@@ -711,7 +709,7 @@ Prime Legionary
 	name = "Ranged Legionary"
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/hunting/trail/scoped
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44=2, \
+		/obj/item/ammo_box/tube/m44=3, \
 		/obj/item/ammo_box/m44box=1, \
 		/obj/item/claymore/machete/reinforced=1)
 
@@ -890,8 +888,8 @@ Auxilia
 	head_announce = list("Security")
 	total_positions = 4
 	spawn_positions = 2
-	description = "You are a respected and valued noncombatant for the Legion, commanding the slaves and Camp Followers and providing important surgical or engineering expertise. Though you hold more authority than the Legionaries in camp, you are not a warrior, and should not act as such unless absolutely necessary."
-	supervisors = "the Decani and Centurion"
+	description = "You are a respected and valued noncombatant for the Legion, commanding the slaves and Camp Followers and providing important surgical or engineering expertise. Though you hold more authority than the Followers in camp, you are not a warrior, and should not act as such unless absolutely necessary."
+	supervisors = "All Legionairies"
 
 	outfit = /datum/outfit/job/CaesarsLegion/f13auxilia
 
