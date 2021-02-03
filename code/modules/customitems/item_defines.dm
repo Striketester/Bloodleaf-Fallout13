@@ -1,4 +1,4 @@
-/// Desert Rose custom items ///
+/// Bloodleaf custom items ///
 /*basic guidelines:
 Custom items must be accepted at some point in the forums by the staff handling them.
 Add custom items to this file, their sprites into their own dmi. in the icons/obj/custom_items.

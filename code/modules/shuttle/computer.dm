@@ -2,7 +2,7 @@
 	name = "shuttle console"
 	desc = "A shuttle control computer."
 	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	req_access = list( )
 	var/shuttleId

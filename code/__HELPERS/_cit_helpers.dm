@@ -1,5 +1,5 @@
 	//Genitals and Arousal Lists
-GLOBAL_LIST_EMPTY(cock_shapes_list)//global_lists.dm for the list initializations //Now also _DATASTRUCTURES globals.dm
+/*GLOBAL_LIST_EMPTY(cock_shapes_list)//global_lists.dm for the list initializations //Now also _DATASTRUCTURES globals.dm
 GLOBAL_LIST_EMPTY(cock_shapes_icons) //Associated list for names->icon_states for cockshapes.
 GLOBAL_LIST_EMPTY(gentlemans_organ_names)
 GLOBAL_LIST_EMPTY(balls_shapes_list)
@@ -40,6 +40,7 @@ GLOBAL_LIST_INIT(dildo_colors, list(//mostly neon colors
 		"Orange"	= "#ff9a00",//orange
 		"Purple"	= "#e300ff"//purple
 		))
+*/
 /*
 /mob/living/carbon/proc/has_penis()
 	if(getorganslot("penis"))//slot shared with ovipositor

@@ -2,7 +2,7 @@
 	name = "teleporter control console"
 	desc = "Used to control a linked teleportation Hub and Station."
 	icon_screen = "teleport"
-	icon_keyboard = "teleport_key"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_BLUE
 	circuit = /obj/item/circuitboard/computer/teleporter
 	var/obj/item/gps/locked

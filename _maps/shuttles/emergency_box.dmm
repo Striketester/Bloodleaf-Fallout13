@@ -1,26 +1,27 @@
-"a" = (/obj/structure/grille,/obj/structure/window/shuttle,/obj/structure/curtain{color = "red"; desc = "lush luxurious velvet curtains from before the war."},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/shuttle/escape)
-"b" = (/turf/closed/wall/mineral/titanium,/area/shuttle/escape)
-"c" = (/obj/docking_port/mobile/emergency{dwidth = 24; height = 6; name = "Vault emergency shuttle"; width = 25},/turf/closed/wall/mineral/titanium/nodiagonal,/area/shuttle/escape)
-"d" = (/obj/machinery/door/airlock/shuttle,/turf/open/floor/plasteel/f13,/area/shuttle/escape)
+"a" = (/turf/open/indestructible/ground/inside/subway,/area/shuttle/escape)
+"b" = (/obj/structure/fluff/rails{dir = 4},/turf/open/indestructible/ground/inside/subway,/area/shuttle/escape)
+"c" = (/obj/structure/window/reinforced/fulltile/indestructable,/turf/open/floor/plasteel/f13,/area/shuttle/escape)
+"d" = (/obj/structure/table/reinforced,/obj/machinery/computer/emergency_shuttle,/turf/open/floor/carpet/black,/area/shuttle/escape)
 "e" = (/turf/open/floor/plasteel/f13,/area/shuttle/escape)
 "f" = (/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
+"g" = (/obj/structure/table/reinforced,/obj/machinery/computer/communications,/turf/open/floor/carpet/black,/area/shuttle/escape)
 "h" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 4; icon_state = "shuttle_chair"; name = "prewar lounge chair"},/turf/open/floor/plasteel/f13,/area/shuttle/escape)
 "i" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 8; name = "prewar lounge chair"},/turf/open/floor/plasteel/f13,/area/shuttle/escape)
-"j" = (/obj/structure/decoration/clock/active,/turf/closed/wall/mineral/titanium,/area/shuttle/escape)
-"k" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 4; icon_state = "shuttle_chair"; name = "prewar lounge chair"},/turf/open/floor/plasteel/f13{icon_state = "greenfull"},/area/shuttle/escape)
+"j" = (/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
+"k" = (/obj/machinery/light{dir = 8; icon_state = "tube"},/obj/structure/table/reinforced,/obj/machinery/computer/message_monitor{dir = 4},/turf/open/floor/carpet/black,/area/shuttle/escape)
 "l" = (/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
-"m" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 8; name = "prewar lounge chair"},/turf/open/floor/plasteel/f13{icon_state = "greenfull"},/area/shuttle/escape)
+"m" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. It has a very futuristic vouge feel."; dir = 1; name = "prewar lounge chair"},/turf/open/floor/carpet/black,/area/shuttle/escape)
 "n" = (/obj/structure/table/reinforced,/obj/machinery/microwave{icon_state = "stove_act"},/obj/machinery/light{dir = 8; icon_state = "tube"},/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
 "o" = (/obj/structure/table/reinforced,/obj/item/kitchen/knife/butcher{icon_state = "butchblood"},/obj/item/kitchen/rollingpin,/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
-"p" = (/obj/machinery/door/airlock/shuttle,/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
-"q" = (/obj/structure/table/reinforced,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/item/reagent_containers/food/snacks/brahminwellington,/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
-"r" = (/obj/machinery/door/airlock/shuttle,/turf/open/floor/plasteel/f13{icon_state = "greenfull"},/area/shuttle/escape)
+"p" = (/obj/machinery/light{dir = 4},/obj/structure/table/reinforced,/obj/machinery/computer/crew{dir = 8},/turf/open/floor/carpet/black,/area/shuttle/escape)
+"q" = (/obj/structure/decoration/clock/active,/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
+"r" = (/obj/machinery/light{dir = 8; icon_state = "tube"},/obj/structure/table/reinforced,/turf/open/floor/carpet/black,/area/shuttle/escape)
 "s" = (/obj/machinery/food_cart,/obj/machinery/light{dir = 8; icon_state = "tube"},/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
-"t" = (/turf/open/floor/plasteel/f13{icon_state = "greenfull"},/area/shuttle/escape)
+"t" = (/obj/machinery/light{dir = 4},/obj/structure/table/reinforced,/turf/open/floor/carpet/black,/area/shuttle/escape)
 "u" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 4; icon_state = "shuttle_chair"; name = "prewar lounge chair"},/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
 "v" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 8; name = "prewar lounge chair"},/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
-"w" = (/turf/closed/wall/mineral/titanium/nodiagonal,/area/shuttle/escape)
-"x" = (/obj/machinery/door/airlock/shuttle,/obj/structure/curtain{color = "red"; desc = "lush luxurious velvet curtains from before the war."},/turf/open/floor/f13{icon_state = "floorrustysolid"},/area/shuttle/escape)
+"w" = (/obj/structure/grille,/obj/structure/curtain{color = "red"; desc = "lush luxurious velvet curtains from before the war."},/obj/structure/window/reinforced/fulltile,/turf/open/floor/plasteel/f13,/area/shuttle/escape)
+"x" = (/obj/structure/curtain{color = "red"; desc = "lush luxurious velvet curtains from before the war."},/obj/machinery/door/airlock/security,/turf/open/floor/carpet/black,/area/shuttle/escape)
 "y" = (/turf/open/floor/carpet/black,/area/shuttle/escape)
 "z" = (/obj/structure/closet/fridge,/obj/item/reagent_containers/food/snacks/bun,/obj/item/reagent_containers/food/snacks/bun,/obj/item/reagent_containers/food/snacks/bun,/obj/item/reagent_containers/food/snacks/dough,/obj/item/reagent_containers/food/snacks/dough,/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
 "A" = (/obj/structure/closet/fridge,/obj/effect/spawner/lootdrop/three_course_meal,/obj/effect/spawner/lootdrop/three_course_meal,/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
@@ -29,35 +30,40 @@
 "D" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 8; name = "prewar lounge chair"},/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/f13,/area/shuttle/escape)
 "E" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 4; icon_state = "shuttle_chair"; name = "prewar lounge chair"},/obj/machinery/light{dir = 8; icon_state = "tube"},/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
 "F" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 8; name = "prewar lounge chair"},/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
-"G" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 4; icon_state = "shuttle_chair"; name = "prewar lounge chair"},/obj/machinery/light{dir = 8; icon_state = "tube"},/turf/open/floor/plasteel/f13{icon_state = "greenfull"},/area/shuttle/escape)
-"H" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 8; name = "prewar lounge chair"},/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/f13{icon_state = "greenfull"},/area/shuttle/escape)
-"K" = (/obj/structure/sink/kitchen{pixel_y = 30},/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
+"G" = (/obj/structure/window/reinforced/fulltile/indestructable,/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
+"H" = (/obj/machinery/door/airlock/hatch,/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
+"I" = (/obj/structure/decoration/clock/active,/obj/structure/window/reinforced/fulltile/indestructable,/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
+"J" = (/obj/structure/curtain{color = "red"; desc = "lush luxurious velvet curtains from before the war."},/obj/machinery/door/airlock/hatch,/turf/open/floor/carpet/black,/area/shuttle/escape)
+"K" = (/obj/structure/curtain{color = "red"; desc = "lush luxurious velvet curtains from before the war."},/obj/machinery/door/airlock/hatch,/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
 "L" = (/obj/structure/table/reinforced,/obj/machinery/processor/chopping_block,/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
+"M" = (/obj/structure/table/reinforced,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/item/reagent_containers/food/snacks/brahminwellington,/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
+"N" = (/obj/structure/sink/kitchen{dir = 4; pixel_x = -15; tag = "icon-sink_alt (EAST)"},/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
+"O" = (/obj/docking_port/mobile/emergency{dwidth = 24; height = 6; name = "Vault emergency shuttle"; width = 25},/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
 
 (1,1,1) = {"
-wbbbbw
-bnoqKb
-bllllb
-bLlllj
-bBllzb
-bsllAb
-baxxab
-bCyyDb
-bhyyib
-deyyij
-bhyyib
-bCyyDb
-baxxab
-bEffFb
-buffvb
-pfffvj
-buffvb
-bEffFb
-baxxab
-bGyyHb
-bkyymb
-rtyymj
-bkyymb
-bGyyHb
-cbbbbw
+abaaba
+abccba
+acdgca
+jkmmpq
+jyyyyj
+jryytj
+jwxxwj
+jCyyDj
+GhyyiG
+HeyyiI
+GhyyiG
+jCyyDj
+jwJJwj
+jEffFj
+GuffvG
+HfffvI
+GuffvG
+jEffFj
+jjKKjj
+jnllMj
+GNlloG
+HlllLI
+GBllzG
+jsllAj
+Ojjjjj
 "}

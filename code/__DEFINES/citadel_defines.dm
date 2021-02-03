@@ -107,7 +107,7 @@
 #define AROUSAL "arousal"
 
 //Citadel istypes
-#define isgenital(A) (istype(A, /obj/item/organ/genital))
+//#define isgenital(A) (istype(A, /obj/item/organ/genital))
 
 #define CITADEL_MENTOR_OOC_COLOUR "#224724"
 //Citadel toggles because bitflag memes

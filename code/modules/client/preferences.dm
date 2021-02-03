@@ -76,9 +76,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/facial_hair_color = "000"		//Facial hair color
 	var/skin_tone = "caucasian1"		//Skin color
 
-	var/has_dick = 0						//Do they have a penis? (for ERP verbs and surgery)
-	var/has_vulva = 0						//Do they have a vagina? (for ERP verbs and surgery)
-	var/has_breast = 0						//Do they have breasts? (for ERP verbs and surgery)
+//	var/has_dick = 0						//Do they have a penis? (for ERP verbs and surgery)
+//	var/has_vulva = 0						//Do they have a vagina? (for ERP verbs and surgery)
+//	var/has_breast = 0						//Do they have breasts? (for ERP verbs and surgery)
 
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
@@ -94,8 +94,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		"body_markings" = "None",
 		"legs" = "Normal Legs",
 		"moth_wings" = "Plain",
-		"exhibitionist" = FALSE,
-		"genitals_use_skintone" = TRUE,
+		"exhibitionist" = FALSE)
+/*		"genitals_use_skintone" = TRUE,
 		"has_cock" = FALSE,
 		"cock_shape" = "Human",
 		"cock_length" = 6,
@@ -142,7 +142,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		"womb_efficiency" = CUM_EFFICIENCY,
 		"womb_fluid" = "femcum",
 		"body_model" = MALE)
-
+*/
 	var/special_s = 3
 	var/special_p = 3
 	var/special_e = 3
@@ -290,7 +290,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Character Settings</a>"
 	dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Game Preferences</a>"
 	dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>OOC Preferences</a>"
-	dat += "<a href='?_src_=prefs;preference=tab;tab=3' [current_tab == 3 ? "class='linkOn'" : ""]>Lewd Preferences</a>"
+//	dat += "<a href='?_src_=prefs;preference=tab;tab=3' [current_tab == 3 ? "class='linkOn'" : ""]>Lewd Preferences</a>"
 
 	if(!path)
 		dat += "<div class='notice'>Please create an account to save your preferences</div>"
@@ -747,7 +747,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "</td>"
 			dat += "</tr></table>"
 
-		if(3)//lewd preferences
+/*		if(3)//lewd preferences
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 			dat += "<h2>Lewd content</h2>"
 			dat += "<b>Allow Lewd Verbs:</b> <a href='?_src_=prefs;preference=verb_consent'>[(wasteland_toggles & VERB_CONSENT) ? "Yes":"No"]</a><br>"
@@ -808,6 +808,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "</td>"
 			dat += "</td>"
 			dat += "</tr></table>"
+			*/
 	dat += "<hr><center>"
 
 	if(!IsGuestKey(user.key))
@@ -1886,7 +1887,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(new_s_tone)
 						skin_tone = new_s_tone
 				//Genital code
-				if("cock_color")
+			/*	if("cock_color")
 					var/new_cockcolor = input(user, "Penis color:", "Character Preference") as color|null
 					if(new_cockcolor)
 						var/temp_hsv = RGBtoHSV(new_cockcolor)
@@ -1997,7 +1998,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							features["vag_color"] = sanitize_hexcolor(new_vagcolor)
 						else
 							to_chat(user,"<span class='danger'>Invalid color. Your color is not bright enough.</span>")
-
+*/
 
 				if("ooccolor")
 					var/new_ooccolor = input(user, "Choose your OOC colour:", "Game Preference",ooccolor) as color|null
@@ -2062,7 +2063,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		else
 			switch(href_list["preference"])
 				//CITADEL PREFERENCES EDIT - I can't figure out how to modularize these, so they have to go here. :c -Pooj
-				if("genital_colour")
+	/*			if("genital_colour")
 					features["genitals_use_skintone"] = !features["genitals_use_skintone"]
 				if("arousable")
 					arousable = !arousable
@@ -2102,6 +2103,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						toggles ^= MEMBER_PUBLIC
 				if("body_model")
 					features["body_model"] = features["body_model"] == MALE ? FEMALE : MALE
+*/
 				if("gender")
 					var/chosengender = input(user, "Select your character's gender.", "Gender Selection", gender) as null|anything in list(MALE,FEMALE,"nonbinary","object")
 					if(!chosengender)
@@ -2116,7 +2118,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						else
 							features["body_model"] = chosengender
 					gender = chosengender
-
+/*
 
 				if("has_dick")
 					if(has_dick == 1)
@@ -2133,7 +2135,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						has_breast = 0
 					else
 						has_breast = 1
-
+*/
 				if("hotkeys")
 					hotkeys = !hotkeys
 					if(hotkeys)
@@ -2177,10 +2179,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				if("hear_radio")
 					wasteland_toggles ^= SOUND_RADIO
-
+/*
 				if("verb_consent")
 					wasteland_toggles ^= VERB_CONSENT
-
+*/
 				if("lobby_music")
 					toggles ^= SOUND_LOBBY
 					if((toggles & SOUND_LOBBY) && user.client && isnewplayer(user))
@@ -2284,10 +2286,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.special_a = special_a
 	character.special_l = special_l
 
-	character.has_dick = has_dick
+/*	character.has_dick = has_dick
 	character.has_vulva = has_vulva
 	character.has_breast = has_breast
-
+*/
 	character.eye_color = eye_color
 	var/obj/item/organ/eyes/organ_eyes = character.getorgan(/obj/item/organ/eyes)
 	if(organ_eyes)

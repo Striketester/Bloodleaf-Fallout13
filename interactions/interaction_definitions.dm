@@ -1,3 +1,4 @@
+/*
 /datum/interaction/handshake
 	command = "handshake"
 	description = "Shake their hand."
@@ -69,3 +70,4 @@
 	max_distance = 25
 	needs_physical_contact = 1
 	max_distance = 25
+*/

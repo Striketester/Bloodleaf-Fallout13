@@ -4,7 +4,7 @@
 #define IS_DOCKED (SSshuttle.emergency.mode == SHUTTLE_DOCKED || (ENGINES_STARTED))
 
 /obj/machinery/computer/emergency_shuttle
-	name = "emergency shuttle console"
+	name = "monorail console"
 	desc = "For shuttle control."
 	icon_screen = "terminal_on"
 	icon_keyboard = ""
@@ -63,7 +63,7 @@
 		to_chat(user, "<span class='warning'>You don't have an ID.</span>")
 		return
 
-	if(!(ACCESS_HEADS in ID.access))
+	if(!(ACCESS_HEADS || ACCESS_NCR || ACCESS_BOS || ACCESS_LEGION || ACCESS_VAULT_F13 || ACCESS_COMMAND in ID.access))
 		to_chat(user, "<span class='warning'>The access level of your card is not high enough.</span>")
 		return
 
@@ -104,8 +104,8 @@
 
 	authorized += ID
 
-	message_admins("[ADMIN_LOOKUPFLW(user)] has authorized early shuttle launch")
-	log_game("[key_name(user)] has authorized early shuttle launch in [COORD(src)]")
+	message_admins("[ADMIN_LOOKUPFLW(user)] has authorized early monorail departure")
+	log_game("[key_name(user)] has authorized early departure launch in [COORD(src)]")
 	// Now check if we're on our way
 	. = TRUE
 	process()
@@ -129,7 +129,7 @@
 		// shuttle timers use 1/10th seconds internally
 		SSshuttle.emergency.setTimer(ENGINES_START_TIME)
 		var/system_error = obj_flags & EMAGGED ? "SYSTEM ERROR:" : null
-		minor_announce("The emergency shuttle will launch in \
+		minor_announce("The monorail will depart in \
 			[TIME_LEFT] seconds", system_error, alert=TRUE)
 		. = TRUE
 
@@ -139,12 +139,12 @@
 		return
 
 	if((obj_flags & EMAGGED) || ENGINES_STARTED)	//SYSTEM ERROR: THE SHUTTLE WILL LA-SYSTEM ERROR: THE SHUTTLE WILL LA-SYSTEM ERROR: THE SHUTTLE WILL LAUNCH IN 10 SECONDS
-		to_chat(user, "<span class='warning'>The shuttle is already about to launch!</span>")
+		to_chat(user, "<span class='warning'>The monorail is already about to depart!</span>")
 		return
 
 	var/time = TIME_LEFT
-	message_admins("[ADMIN_LOOKUPFLW(user.client)] has emagged the emergency shuttle [time] seconds before launch.")
-	log_game("[key_name(user)] has emagged the emergency shuttle in [COORD(src)] [time] seconds before launch.")
+	message_admins("[ADMIN_LOOKUPFLW(user.client)] has emagged the monorail  [time] seconds before launch.")
+	log_game("[key_name(user)] has emagged the monorail in [COORD(src)] [time] seconds before launch.")
 	obj_flags |= EMAGGED
 	SSshuttle.emergency.movement_force = list("KNOCKDOWN" = 60, "THROW" = 20)//YOUR PUNY SEATBELTS can SAVE YOU NOW, MORTAL
 	var/datum/species/S = new
@@ -173,7 +173,7 @@
 	. = ..()
 
 /obj/docking_port/mobile/emergency
-	name = "emergency shuttle"
+	name = "monorail"
 	id = "emergency"
 
 	dwidth = 9
@@ -226,7 +226,7 @@
 	else
 		SSshuttle.emergencyLastCallLoc = null
 
-	priority_announce("The train has been called. [redAlert ? "Red Alert state confirmed: Dispatching priority train. " : "" ]It will arrive in [timeLeft(600)] minutes.[reason][SSshuttle.emergencyLastCallLoc ? "\n\nCall signal traced. Results can be viewed on any communications console." : "" ]", null, 'sound/f13/quest.ogg', "Priority")
+	priority_announce("The monorail has been called. [redAlert ? "Red Alert state confirmed: Dispatching priority train. " : "" ]It will arrive in [timeLeft(600)] minutes.[reason][SSshuttle.emergencyLastCallLoc ? "\n\nCall signal traced. Results can be viewed on any communications console." : "" ]", null, 'sound/f13/quest.ogg', "Priority")
 
 /obj/docking_port/mobile/emergency/cancel(area/signalOrigin)
 	if(mode != SHUTTLE_CALL)
@@ -241,7 +241,7 @@
 		SSshuttle.emergencyLastCallLoc = signalOrigin
 	else
 		SSshuttle.emergencyLastCallLoc = null
-	priority_announce("The train has been recalled.[SSshuttle.emergencyLastCallLoc ? " Recall signal traced. Results can be viewed on any communications console." : "" ]", null, 'sound/f13/quest.ogg', "Priority")
+	priority_announce("The monorail has been recalled.[SSshuttle.emergencyLastCallLoc ? " Recall signal traced. Results can be viewed on any communications console." : "" ]", null, 'sound/f13/quest.ogg', "Priority")
 
 /obj/docking_port/mobile/emergency/proc/is_hijacked()
 	var/has_people = FALSE
@@ -351,7 +351,7 @@
 				mode = SHUTTLE_ESCAPE
 				launch_status = ENDGAME_LAUNCHED
 				setTimer(SSshuttle.emergencyEscapeTime * engine_coeff)
-				priority_announce("The train has left the station. Estimate [timeLeft(600)] minutes until the train arrives to the target destination.", null, null, "Priority")
+				priority_announce("The monorail has left the station. Estimate [timeLeft(600)] minutes until the monorail arrives to the target destination.", null, null, "Priority")
 
 		if(SHUTTLE_STRANDED)
 			SSshuttle.checkHostileEnvironment()
@@ -389,7 +389,7 @@
 				if(is_hijacked())
 					destination_dock = "emergency_syndicate"
 					minor_announce("Corruption detected in \
-						shuttle navigation protocols. Please contact your \
+						monorauil navigation protocols. Please contact your \
 						supervisor.", "SYSTEM ERROR:", alert=TRUE)
 
 				dock_id(destination_dock)
@@ -398,12 +398,12 @@
 
 /obj/docking_port/mobile/emergency/transit_failure()
 	..()
-	message_admins("Moving emergency shuttle directly to centcom dock to prevent deadlock.")
+	message_admins("Moving monorail directly to vault dock to prevent deadlock.")
 
 	mode = SHUTTLE_ESCAPE
 	launch_status = ENDGAME_LAUNCHED
 	setTimer(SSshuttle.emergencyEscapeTime)
-	priority_announce("The Emergency Shuttle preparing for direct jump. Estimate [timeLeft(600)] minutes until the shuttle docks at Central Command.", null, null, "Priority")
+	priority_announce("The monorail is preparing for direct departure. Estimate [timeLeft(600)] minutes until the monorail arrives at the Vault.", null, null, "Priority")
 
 
 /obj/docking_port/mobile/pod

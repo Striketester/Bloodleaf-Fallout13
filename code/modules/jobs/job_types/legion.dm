@@ -33,7 +33,7 @@
 			var/obj/item/card/id/dogtag/L = H.wear_id
 			L.registered_name = H.name
 			L.update_label()
-	if(H.real_name == ("Biggus Dickus" || "Bigus Dickus"))
+	if(H.real_name == ("Biggus Dickus" || "Bigus Dickus" || "Wind-That-Stabs"))
 		H.real_name = "Minimae Coles"
 		H.name = "Minimae Coles"
 		H.lust_tolerance = 0
@@ -984,7 +984,7 @@ Auxilia
 	)
 /*
 Camp Follower
-
+*/
 /datum/job/CaesarsLegion/f13campfollower
 	title = "Camp Follower"
 	flag = F13CAMPFOLLOWER
@@ -1026,32 +1026,30 @@ Camp Follower
 	else if (follower_job == "miner")
 		belt = /obj/item/storage/bag/ore
 		backpack = /obj/item/pickaxe
-		l_hand = /obj/item/radio
 		if (prob(50))
 			suit = /obj/item/clothing/suit/fluff/vest
 	else if (follower_job == "farmer")
 		belt = /obj/item/storage/bag/plants
-		l_hand = /obj/item/radio
 		if (prob(50))
 			suit = /obj/item/clothing/suit/fluff/vest
 	else if (follower_job == "smith")
 		backpack = /obj/item/storage/backpack/satchel/explorer
-		backpack_contents = list(/obj/item/radio, /obj/item/screwdriver, /obj/item/wrench, /obj/item/crowbar, /obj/item/wirecutters)
+		backpack_contents = list(/obj/item/screwdriver, /obj/item/wrench, /obj/item/crowbar, /obj/item/wirecutters)
 		if (prob(50))
 			suit = /obj/item/clothing/suit/fluff/vest
 	else if (follower_job == "healer")
 		backpack = /obj/item/storage/backpack/satchel/explorer
-		backpack_contents = list(/obj/item/radio, /obj/item/reagent_containers/pill/patch/healingpowder=4, /obj/item/stack/medical/gauze/improvised = 2)
+		backpack_contents = list(/obj/item/reagent_containers/pill/patch/healingpowder=4, /obj/item/stack/medical/gauze/improvised = 2)
 		if (prob(50))
 			suit = /obj/item/clothing/suit/apron/surgical
 	else if (follower_job == "caretaker")
 		backpack = /obj/item/storage/backpack/satchel/explorer
-		backpack_contents = list(/obj/item/radio, /obj/item/soap/homemade, /obj/item/melee/flyswatter, /obj/item/reagent_containers/glass/rag, /obj/item/reagent_containers/glass/bucket, /obj/item/stack/medical/gauze/improvised)
-*/
+		backpack_contents = list(/obj/item/soap/homemade, /obj/item/melee/flyswatter, /obj/item/reagent_containers/glass/rag, /obj/item/reagent_containers/glass/bucket, /obj/item/stack/medical/gauze/improvised)
+
 
 /*
 Slave
-*/
+
 /datum/job/CaesarsLegion/slave
 	title = "Legion Slave"
 	flag = F13LEGIONSLAVE
@@ -1140,3 +1138,4 @@ Slave
 	backpack_contents = list(
 		/obj/item/pickaxe=1, \
 		/obj/item/radio=1)
+*/

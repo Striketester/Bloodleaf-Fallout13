@@ -105,7 +105,7 @@
 	if(. && isliving(user))
 		var/mob/living/L = user
 		L.SetSleeping(200)
-/*
+
 /datum/emote/living/flap
 	key = "flap"
 	key_third_person = "flaps"
@@ -132,7 +132,7 @@
 	message = "flaps their wings ANGRILY!"
 	restraint_check = TRUE
 	wing_time = 10
-*/
+
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"
@@ -431,7 +431,7 @@
 					return
 			var/static/regex/slurs = regex("nigg|fag|tranny|dyke|kike|pedo|loli|shota", "i")
 			if(findtext(custom_emote, slurs))
-				//to_chat(user, "<B>Slurs are not allowed on Desert Rose.</B>")
+				//to_chat(user, "<B>Slurs are not allowed on Bloodleaf.</B>")
 				log_admin("[key_name(user)] has triggered the slur filter in IC (emote): [custom_emote]")
 				message_admins("[key_name_admin(user)] has triggered the slur filter in IC (emote): [custom_emote]")
 				//return 0 //Uncomment this (and the to_chat line) if we want to prevent them saying it, rather than just alert us.
