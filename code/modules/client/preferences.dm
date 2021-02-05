@@ -228,7 +228,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/clientfps = 40
 
 	var/parallax
-	var/arousable = TRUE
+//	var/arousable = TRUE
 	var/ambientocclusion = TRUE
 	var/auto_fit_viewport = FALSE
 
@@ -337,8 +337,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a><BR>"
 
 			dat += "<b>Gender:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : (gender == FEMALE ? "Female" : (gender == PLURAL ? "Non-binary" : "Object"))]</a><BR>"
-			if(gender != NEUTER && pref_species.sexes)
-				dat += "<b>Body Model:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=body_model'>[features["body_model"] == MALE ? "Masculine" : "Feminine"]</a><BR>"
+//			if(gender != NEUTER && pref_species.sexes)
+//				dat += "<b>Body Model:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=body_model'>[features["body_model"] == MALE ? "Masculine" : "Feminine"]</a><BR>"
 			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
 			dat += "<br><b>Cycle background:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cycle_bg;task=input'>[bgstate]</a><BR>"
 /*
@@ -2105,18 +2105,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					features["body_model"] = features["body_model"] == MALE ? FEMALE : MALE
 */
 				if("gender")
-					var/chosengender = input(user, "Select your character's gender.", "Gender Selection", gender) as null|anything in list(MALE,FEMALE,"nonbinary","object")
+					var/chosengender = input(user, "Select your character's gender.", "Gender Selection", gender) as null|anything in list(MALE,FEMALE)
 					if(!chosengender)
 						return
-					switch(chosengender)
-						if("nonbinary")
-							chosengender = PLURAL
-							features["body_model"] = pick(MALE, FEMALE)
-						if("object")
-							chosengender = NEUTER
-							features["body_model"] = MALE
-						else
-							features["body_model"] = chosengender
+					features["body_model"] = chosengender
 					gender = chosengender
 /*
 

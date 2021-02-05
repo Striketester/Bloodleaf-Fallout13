@@ -1,6 +1,7 @@
 /obj/structure/frame/computer
 	name = "computer frame"
-	icon_state = "0"
+	icon = 'icons/obj/computer.dmi'
+	icon_state = "terminal"
 	state = 0
 
 /obj/structure/frame/computer/attackby(obj/item/P, mob/user, params)
