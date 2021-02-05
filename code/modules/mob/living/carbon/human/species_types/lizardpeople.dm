@@ -36,7 +36,7 @@
 	return randname
 
 //I wag in death
-/*
+
 /datum/species/lizard/spec_death(gibbed, mob/living/carbon/human/H)
 	if(H)
 		H.endTailWag()
@@ -45,7 +45,7 @@
 	if(H)
 		H.endTailWag()
 	. = ..()
-*/
+
 /*
  Lizard subspecies: ASHWALKERS
 */

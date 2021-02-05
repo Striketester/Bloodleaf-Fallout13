@@ -8,7 +8,7 @@
 		return
 	return ..()
 */
-
+/*
 /mob/living/carbon/human/MouseDrop_T(mob/M as mob, mob/living/carbon/human/user as mob)
 	if(M == src || src == usr || M != usr)
 		return
@@ -43,7 +43,7 @@
 	var/datum/browser/popup = new(usr, "interactions", "Interactions", 340, 480)
 	popup.set_content(dat)
 	popup.open()
-
+*/
 /*
 /atom/movable/attack_hand(mob/living/carbon/human/user)
 	. = ..()

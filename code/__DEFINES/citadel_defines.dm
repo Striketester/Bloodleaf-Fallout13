@@ -3,13 +3,14 @@
 //Measurements are in imperial units. Inches, feet, yards, miles. Tsp, tbsp, cups, quarts, gallons, etc
 
 //Filters
-#define CIT_FILTER_STAMINACRIT filter(type="drop_shadow", x=0, y=0, size=-3, color="#04080F")
+//#define CIT_FILTER_STAMINACRIT filter(type="drop_shadow", x=0, y=0, size=-3, color="#04080F")
 //hud s tuff
-#define ui_arousal "EAST-1:28,CENTER-4:8"//Below the health doll
+//#define ui_arousal "EAST-1:28,CENTER-4:8"//Below the health doll
 
 
 
 //genital flags
+/*
 #define GENITAL_BLACKLISTED		(1<<0) //for genitals that shouldn't be added to GLOB.genitals_list.
 #define GENITAL_INTERNAL		(1<<1)
 #define GENITAL_HIDDEN			(1<<2)
@@ -22,9 +23,10 @@
 #define GENITAL_UNDIES_HIDDEN	(1<<9)
 #define UPDATE_OWNER_APPEARANCE	(1<<10)
 #define GENITAL_CAN_TAUR		(1<<11)
-
+*/
 
 //organ defines
+/*
 #define COCK_SIZE_MIN		1
 #define COCK_SIZE_MAX		10
 
@@ -39,9 +41,9 @@
 #define BALLS_VOLUME_BASE	25
 #define BALLS_VOLUME_MULT	1
 
-#define BALLS_SIZE_MIN		1 //Hyper - Unchanged
-#define BALLS_SIZE_DEF		8 //Changed from 2
-#define BALLS_SIZE_MAX		40 //Changed from 3
+#define BALLS_SIZE_MIN		1 Hyper - Unchanged
+#define BALLS_SIZE_DEF		8 Changed from 2
+#define BALLS_SIZE_MAX		40 Changed from 3
 
 #define BALLS_SACK_SIZE_MIN 1
 #define BALLS_SACK_SIZE_DEF	8
@@ -49,14 +51,14 @@
 
 #define CUM_RATE			5
 #define CUM_RATE_MULT		1
-#define CUM_EFFICIENCY		1 //amount of nutrition required per life()
+#define CUM_EFFICIENCY		1 amount of nutrition required per life()
 
-#define EGG_GIRTH_MIN		1 //inches
+#define EGG_GIRTH_MIN		1 inches
 #define EGG_GIRTH_DEF		6
 #define EGG_GIRTH_MAX		16
 
-#define BREASTS_VOLUME_BASE	50	//base volume for the reagents in the breasts, multiplied by the size then multiplier. 50u for A cups, 850u for HH cups.
-#define BREASTS_VOLUME_MULT	1	//global multiplier for breast volume.
+#define BREASTS_VOLUME_BASE	50	base volume for the reagents in the breasts, multiplied by the size then multiplier. 50u for A cups, 850u for HH cups.
+#define BREASTS_VOLUME_MULT	1	global multiplier for breast volume.
 #define BREASTS_SIZE_FLAT	0
 #define BREASTS_SIZE_A		1
 #define BREASTS_SIZE_B		2
@@ -77,8 +79,9 @@
 #define BREASTS_SIZE_MASSIVE		17
 #define BREASTS_SIZE_GIGA		25
 #define BREASTS_SIZE_IMPOSSIBLE		30
-
+*/
 //Bodysize Limits
+/*
 #define MIN_BODYSIZE		50
 #define MAX_BODYSIZE		200
 
@@ -93,7 +96,7 @@
 #define AROUSAL_MINIMUM_DEFAULT 	0
 #define AROUSAL_MAXIMUM_DEFAULT 	100
 #define AROUSAL_START_VALUE			1
-
+*/
 //visibility toggles defines to avoid errors typos code errors.
 #define GEN_VISIBLE_ALWAYS "Always visible"
 #define GEN_VISIBLE_NO_CLOTHES "Hidden by clothes"
@@ -104,10 +107,10 @@
 #define ADMIN_IC(client) "(<a href='?_src_=holder;icissue=\ref[client]'>IC</a>)"//marks and adminhelp as an IC issue
 #define ADMIN_REJECT(client) "(<a href='?_src_=holder;rejectadminhelp=\ref[client]'>REJT</a>)"//Rejects an adminhelp for being unclear or otherwise unhelpful. resets their adminhelp timer
 
-#define AROUSAL "arousal"
+//#define AROUSAL "arousal"
 
 //Citadel istypes
-#define isgenital(A) (istype(A, /obj/item/organ/genital))
+//#define isgenital(A) (istype(A, /obj/item/organ/genital))
 
 #define CITADEL_MENTOR_OOC_COLOUR "#224724"
 //Citadel toggles because bitflag memes

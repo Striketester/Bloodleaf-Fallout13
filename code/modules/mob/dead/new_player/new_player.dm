@@ -438,7 +438,7 @@
 		SSquirks.AssignQuirks(humanc, humanc.client, TRUE)
 
 	log_manifest(character.mind.key,character.mind,character,latejoin = TRUE)
-//	handle_roundstart_items(character, character.mind.key, character.mind.assigned_role, character.mind.special_role) //CIT CHANGE - makes donators spawn with their items. This can safely be commented out when all of the donator items are migrated to the loadout system
+	handle_roundstart_items(character, character.mind.key, character.mind.assigned_role, character.mind.special_role) //CIT CHANGE - makes donators spawn with their items. This can safely be commented out when all of the donator items are migrated to the loadout system
 
 /mob/dead/new_player/proc/AddEmploymentContract(mob/living/carbon/human/employee)
 	//TODO:  figure out a way to exclude wizards/nukeops/demons from this.

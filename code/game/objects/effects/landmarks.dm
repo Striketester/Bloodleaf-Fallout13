@@ -594,7 +594,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/f13/knightcap
 	name = "Knight-Captain"
-	icon_state = "Initiate Knight"
+	icon_state = "Paladin"
 
 /obj/effect/landmark/start/f13/seniorknight
 	name = "Senior Knight"

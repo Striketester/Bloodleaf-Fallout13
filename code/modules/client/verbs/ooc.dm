@@ -51,6 +51,12 @@
 			log_admin("[key_name(src)] has triggered the slur filter (OOC): [msg].")
 			message_admins("[key_name_admin(src)] has triggered the slur filter (OOC): [msg].")
 			return
+		var/static/regex/shinobi = regex("Kanoha Shinobi", "Kanoha", "Shinobi", "kanoha shinobi", "i")
+		if(findtext(msg, shinobi))
+			to_chat(src, "<B>Call the dumbass Kenobi, it's shorter and makes em sound more like a jedi than a disgusting weeb.</B>")
+			log_admin("[key_name(src)] has triggered the shinobi filter (OOC): [msg].")
+			message_admins("[key_name_admin(src)] has triggered the slur filter (OOC): [msg].")
+			return
 		if(CONFIG_GET(flag/blockoocurls))
 			if(findtext(msg, "://") || findtext(msg, "www."))
 				to_chat(src, "<B>Posting clickable links in OOC is not allowed.</B>")

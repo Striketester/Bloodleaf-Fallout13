@@ -567,7 +567,7 @@
 	reagent_state = LIQUID
 	can_synth = FALSE
 	color = "#FFEBEB"
-/*
+
 /datum/reagent/flightpotion/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
 		if(!ishumanbasic(M) || reac_volume < 5) // implying xenohumans are holy
@@ -581,7 +581,7 @@
 		M.adjustBruteLoss(20)
 		M.emote("scream")
 	..()
-*/
+
 
 /obj/item/jacobs_ladder
 	name = "jacob's ladder"

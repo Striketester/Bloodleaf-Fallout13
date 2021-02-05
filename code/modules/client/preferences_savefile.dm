@@ -186,7 +186,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["tip_delay"], tip_delay)
 	WRITE_FILE(S["pda_style"], pda_style)
 	WRITE_FILE(S["pda_color"], pda_color)
-	WRITE_FILE(S["arousable"], arousable)
+//	WRITE_FILE(S["arousable"], arousable)
 
 	return 1
 
@@ -227,7 +227,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["name_is_always_random"] >> be_random_name
 	S["body_is_always_random"] >> be_random_body
 	S["gender"]				>> gender
-	S["body_model"]			>> features["body_model"]
+//	S["body_model"]			>> features["body_model"]
 	S["age"]				>> age
 	//special
 	S["special_s"]			>> special_s
@@ -237,11 +237,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["special_i"]			>> special_i
 	S["special_a"]			>> special_a
 	S["special_l"]			>> special_l
-
+/*
 	S["has_dick"]			>> has_dick
 	S["has_vulva"]			>> has_vulva
 	S["has_breast"]			>> has_breast
-
+*/
 	S["hair_color"]			>> hair_color
 	S["facial_hair_color"]	>> facial_hair_color
 	S["eye_color"]			>> eye_color
@@ -328,7 +328,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["negative_quirks"]	>> negative_quirks
 	S["neutral_quirks"]		>> neutral_quirks
 	//Citadel code
-	S["feature_genitals_use_skintone"]	>> features["genitals_use_skintone"]
+/*	S["feature_genitals_use_skintone"]	>> features["genitals_use_skintone"]
 	S["feature_exhibitionist"]			>> features["exhibitionist"]
 	//cock features
 	S["feature_has_cock"]				>> features["has_cock"]
@@ -358,7 +358,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//womb features
 	S["feature_has_womb"]				>> features["has_womb"]
 	S["feature_can_get_preg"]			>> features["can_get_preg"] //hyperstation 13
-
+*/
 	if((S["flavor_text"] != "") && (S["flavor_text"] != null) && S["flavor_text"]) //If old text isn't null and isn't "" but still exists.
 		S["flavor_text"]				>> features["flavor_text"] //Load old flavortext as current dna-based flavortext
 		WRITE_FILE(S["feature_flavor_text"], features["flavor_text"]) //Save it in our new type of flavor-text
@@ -421,7 +421,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["body_markings"] 	= sanitize_inlist(features["body_markings"], GLOB.body_markings_list)
 	features["feature_lizard_legs"]	= sanitize_inlist(features["legs"], GLOB.legs_list, "Normal Legs")
 	features["moth_wings"] 	= sanitize_inlist(features["moth_wings"], GLOB.moth_wings_list, "Plain")
-
+/*
 	var/static/list/B_sizes
 	if(!B_sizes)
 		var/list/L = CONFIG_GET(keyed_flag_list/breasts_cups_prefs)
@@ -436,7 +436,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!safe_visibilities)
 		var/list/L = CONFIG_GET(keyed_flag_list/safe_visibility_toggles)
 		safe_visibilities = L.Copy()
-
+*/
 	joblessrole	= sanitize_integer(joblessrole, 1, 3, initial(joblessrole))
 	job_civilian_high = sanitize_integer(job_civilian_high, 0, 65535, initial(job_civilian_high))
 	job_civilian_med = sanitize_integer(job_civilian_med, 0, 65535, initial(job_civilian_med))
@@ -510,11 +510,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["special_i"]		,special_i)
 	WRITE_FILE(S["special_a"]		,special_a)
 	WRITE_FILE(S["special_l"]		,special_l)
-
+/*
 	WRITE_FILE(S["has_dick"]		 , has_dick)
 	WRITE_FILE(S["has_vulva"]		 , has_vulva)
 	WRITE_FILE(S["has_breast"]		, has_breast)
-
+*/
 	WRITE_FILE(S["hair_color"]			, hair_color)
 	WRITE_FILE(S["facial_hair_color"]	, facial_hair_color)
 	WRITE_FILE(S["eye_color"]			, eye_color)
@@ -543,7 +543,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_moth_wings"]			, features["moth_wings"])
 
 	//Citadel
-	WRITE_FILE(S["feature_genitals_use_skintone"], features["genitals_use_skintone"])
+/*	WRITE_FILE(S["feature_genitals_use_skintone"], features["genitals_use_skintone"])
 	WRITE_FILE(S["feature_exhibitionist"], features["exhibitionist"])
 	//biological features
 	WRITE_FILE(S["feature_has_cock"], features["has_cock"])
@@ -574,7 +574,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_has_womb"], features["has_womb"])
 	//biological features
 	WRITE_FILE(S["feature_can_get_preg"], features["can_get_preg"])
-
+*/
 	//Custom names
 	for(var/custom_name_id in GLOB.preferences_custom_names)
 		var/savefile_slot_name = custom_name_id + "_name" //TODO remove this

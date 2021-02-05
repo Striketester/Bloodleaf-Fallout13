@@ -11,7 +11,7 @@
 	name = "elevator controls"
 	desc = "Controls the elevator."
 	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/vault_control
 	shuttleId = "vault_elevator"
@@ -23,7 +23,7 @@
 	name = "platform controls"
 	desc = "Controls the platform."
 	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/enclave_control
 	shuttleId = "enclavefort_elevator"
@@ -35,7 +35,7 @@
 	name = "elevator controls"
 	desc = "Controls the platform."
 	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/bos_control
 	shuttleId = "bos_elevator"
@@ -47,7 +47,7 @@
 	name = "elevator controls"
 	desc = "Controls the elevator."
 	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/bunker_control
 	shuttleId = "bunker_elevator"
@@ -59,7 +59,7 @@
 	name = "elevator controls"
 	desc = "Controls the elevator."
 	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/northbunker_control
 	shuttleId = "northbunker_elevator"
@@ -71,7 +71,7 @@
 	name = "elevator controls"
 	desc = "Controls the elevator."
 	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/mining_control
 	shuttleId = "mining_elevator"
@@ -83,7 +83,7 @@
 	name = "vault 113 elevator controls"
 	desc = "Controls the elevator between the Vault and Oasis."
 	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/vault113_control
 	shuttleId = "vault113_elevator"

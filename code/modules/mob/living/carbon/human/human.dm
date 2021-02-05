@@ -1073,10 +1073,10 @@
 
 /mob/living/carbon/human/species/android
 	race = /datum/species/android
-/*
+
 /mob/living/carbon/human/species/angel
 	race = /datum/species/angel
-*/
+
 /mob/living/carbon/human/species/corporate
 	race = /datum/species/corporate
 

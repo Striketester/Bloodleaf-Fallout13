@@ -87,12 +87,12 @@
 	message_param = "raises %t fingers."
 	mob_type_allowed_typecache = list(/mob/living/carbon/human)
 	restraint_check = TRUE
-/*
+
 /datum/emote/living/carbon/tail
 	key = "tail"
 	message = "waves their tail."
 	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
-*/
+
 /datum/emote/living/carbon/wink
 	key = "wink"
 	key_third_person = "winks"

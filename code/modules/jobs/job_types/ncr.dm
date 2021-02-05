@@ -27,7 +27,8 @@ Colonel
 	head_announce = list("Security")
 	supervisors = "the general"
 	req_admin_notify = 1
-
+	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
+	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
 	total_positions = 0
 	spawn_positions = 0
 
@@ -72,7 +73,8 @@ Captain
 	description = "You are the commanding officer of your company and direct superior to the Veteran Ranger and Lieutenant. Coordinating with your staff, you must ensure that the objectives of High Command are completed to the letter. Working closely with your subordinates on logistics, mission planning and special operations with the Rangers, you are here to establish a strong foothold for the NCR within the region."
 	supervisors = "Colonel"
 	req_admin_notify = 1
-
+	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
+	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
 	outfit = /datum/outfit/job/ncr/f13captain
 
 	loadout_options = list(

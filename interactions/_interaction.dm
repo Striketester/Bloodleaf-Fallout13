@@ -10,6 +10,7 @@
 
 
 // Rectum? Damn near killed 'em.
+/*
 var/list/interactions
 
 /proc/make_interactions(interaction)
@@ -46,7 +47,8 @@ var/list/interactions
 	var/require_target_mouth
 	var/require_target_hands
 	var/needs_physical_contact
-
+*/
+/*
 /datum/interaction/proc/evaluate_user(mob/living/carbon/human/user, silent = TRUE)
 	if(user.refactory_period)
 		if(!silent) //bye spam
@@ -144,6 +146,7 @@ var/list/interactions
 	if(interaction_sound)
 		playsound(get_turf(user), interaction_sound, 50, 1, -1)
 	return
+	*/
 /*
 /atom/movable/attack_hand(mob/living/carbon/human/user)
 	. = ..()

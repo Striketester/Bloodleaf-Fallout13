@@ -80,7 +80,7 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/vagina, GLOB.vagina_shapes_list)
 	if(!GLOB.breasts_shapes_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/breasts, GLOB.breasts_shapes_list)
-
+*/
 	var/body_model = MALE
 	switch(intended_gender)
 		if(MALE, FEMALE)
@@ -101,7 +101,7 @@
 		"legs" = "Normal Legs", "caps" = pick(GLOB.caps_list),
 		"moth_wings" = pick(GLOB.moth_wings_list),
 		"genitals_use_skintone"	= TRUE,
-		"exhibitionist" 	= FALSE,
+/*		"exhibitionist" 	= FALSE,
 		"has_cock"			= FALSE,
 		"cock_shape"		= pick(GLOB.cock_shapes_list),
 		"cock_length"		= 6,
@@ -148,8 +148,9 @@
 		"womb_cum_mult"		= CUM_RATE_MULT,
 		"womb_efficiency"	= CUM_EFFICIENCY,
 		"womb_fluid" 		= "femcum",
-		"body_model"		= body_model))
 */
+		"body_model"		= body_model))
+
 /proc/random_hair_style(gender)
 	switch(gender)
 		if(MALE)
