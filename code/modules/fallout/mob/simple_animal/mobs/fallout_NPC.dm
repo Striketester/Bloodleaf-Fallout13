@@ -346,7 +346,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attacktext = "áüåò"
+	attacktext = "hits"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
@@ -356,18 +356,18 @@
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("Patrolling the Mojave almost makes you wish for a nuclear winter.", "When I got this assignment I was hoping there would be more gambling.", "It's been a long tour, all I can think about now is going back home.", "You know, if you were serving, you'd probably be halfway to general by now.", "You oughtta think about enlisting. We need you here.")
+	speak = list("Patrolling the Mojave almost makes you wish for a nuclear winter.", "When I got this assignment I was hoping there would be more gambling.", "It's been a long tour, all I can think about now is going back home.", "You oughtta think about enlisting. We need you here.")
 	speak_emote = list("says")
 	speak_chance = 1
 
 /obj/effect/mob_spawn/human/corpse/ncr
 	name = "NCR Trooper"
 	uniform = /obj/item/clothing/under/f13/ncr
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/reinforced
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
 	gloves = /obj/item/clothing/gloves/f13/ncr
 	//radio = /obj/item/device/radio/headset
-	//mask = /obj/item/clothing/mask/gas
+	mask = /obj/item/clothing/mask/ncr_facewrap
 	head = /obj/item/clothing/head/f13/ncr/goggles
 	//back = /obj/item/weapon/storage/backpack
 
@@ -386,7 +386,11 @@
 	projectiletype = /obj/item/projectile/bullet/F13/c308mmBullet
 	projectilesound = 'sound/weapons/garandshot.ogg'
 	casingtype = /obj/item/ammo_casing/F13/m308
-
+	New()
+		..()
+		icon_state = "ncr_trooper[rand(1,5)]"
+		icon_living = "[icon_state]"
+		icon_dead = "[icon_state]_d"
 /mob/living/simple_animal/hostile/ncr/sergeant
 	name = "NCR Sergeant"
 	desc = "Just a NCR Sergeant"
@@ -404,15 +408,19 @@
 	projectiletype = /obj/item/projectile/bullet/F13/c556Bullet
 	projectilesound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	casingtype = /obj/item/ammo_casing/a556
-
+	New()
+		..()
+		icon_state = "ncr_sergeant[rand(1,3)]"
+		icon_living = "[icon_state]"
+		icon_dead = "[icon_state]_d"
 /obj/effect/mob_spawn/human/corpse/ncr/sergeant
 	name = "NCR Sergeant"
 	uniform = /obj/item/clothing/under/f13/ncr
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/reinforced
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
 	gloves = /obj/item/clothing/gloves/f13/ncr
 	//radio = /obj/item/device/radio/headset
-	//mask = /obj/item/clothing/mask/gas
+	mask = /obj/item/clothing/mask/ncr_facewrap
 	head = /obj/item/clothing/head/f13/ncr/goggles
 	//back = /obj/item/weapon/storage/backpack
 

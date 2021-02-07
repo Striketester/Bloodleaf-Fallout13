@@ -1,8 +1,8 @@
 /obj/machinery/computer/prisoner
 	name = "prisoner management console"
 	desc = "Used to manage tracking implants placed inside criminals."
-	icon_screen = "explosive"
-	icon_keyboard = "security_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	req_access = list(ACCESS_BRIG)
 	var/id = 0
 	var/temp = null

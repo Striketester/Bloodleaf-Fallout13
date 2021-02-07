@@ -1,6 +1,6 @@
 "a" = (/turf/open/indestructible/ground/inside/subway,/area/shuttle/escape)
 "b" = (/obj/structure/fluff/rails{dir = 4},/turf/open/indestructible/ground/inside/subway,/area/shuttle/escape)
-"c" = (/obj/structure/window/reinforced/fulltile/indestructable,/turf/open/floor/plasteel/f13,/area/shuttle/escape)
+"c" = (/turf/open/indestructible/ground/inside/subway,/area/space)
 "d" = (/obj/structure/table/reinforced,/obj/machinery/computer/emergency_shuttle,/turf/open/floor/carpet/black,/area/shuttle/escape)
 "e" = (/turf/open/floor/plasteel/f13,/area/shuttle/escape)
 "f" = (/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
@@ -31,7 +31,7 @@
 "E" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 4; icon_state = "shuttle_chair"; name = "prewar lounge chair"},/obj/machinery/light{dir = 8; icon_state = "tube"},/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
 "F" = (/obj/structure/chair/comfy/shuttle{desc = "A comfortable, secure seat. sturdy, plush, and futuristic."; dir = 8; name = "prewar lounge chair"},/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
 "G" = (/obj/structure/window/reinforced/fulltile/indestructable,/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
-"H" = (/obj/machinery/door/airlock/hatch,/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
+"H" = (/obj/structure/fluff/rails{dir = 4},/turf/open/indestructible/ground/inside/subway,/area/space)
 "I" = (/obj/structure/decoration/clock/active,/obj/structure/window/reinforced/fulltile/indestructable,/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
 "J" = (/obj/structure/curtain{color = "red"; desc = "lush luxurious velvet curtains from before the war."},/obj/machinery/door/airlock/hatch,/turf/open/floor/carpet/black,/area/shuttle/escape)
 "K" = (/obj/structure/curtain{color = "red"; desc = "lush luxurious velvet curtains from before the war."},/obj/machinery/door/airlock/hatch,/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
@@ -39,30 +39,39 @@
 "M" = (/obj/structure/table/reinforced,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/effect/spawner/lootdrop/food,/obj/item/reagent_containers/food/snacks/brahminwellington,/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
 "N" = (/obj/structure/sink/kitchen{dir = 4; pixel_x = -15; tag = "icon-sink_alt (EAST)"},/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
 "O" = (/obj/docking_port/mobile/emergency{dwidth = 24; height = 6; name = "Vault emergency shuttle"; width = 25},/turf/closed/wall/r_wall/rust,/area/shuttle/escape)
+"P" = (/obj/structure/window/reinforced/fulltile/indestructable,/obj/structure/table/reinforced,/turf/open/floor/plasteel/f13,/area/shuttle/escape)
+"Q" = (/obj/machinery/door/airlock/hatch,/turf/open/floor/plasteel/f13,/area/shuttle/escape)
+"R" = (/obj/machinery/door/airlock/hatch,/turf/open/floor/plasteel/f13{icon_state = "bluefull"},/area/shuttle/escape)
+"S" = (/obj/machinery/door/airlock/hatch,/turf/open/floor/plasteel/f13{icon_state = "showroomfloor"},/area/shuttle/escape)
 
 (1,1,1) = {"
-abaaba
-abccba
-acdgca
+cHccHc
+cHccHc
+cHccHc
+cHccHc
+cHccHc
+cHccHc
+abPPba
+aPdgPa
 jkmmpq
 jyyyyj
 jryytj
 jwxxwj
 jCyyDj
 GhyyiG
-HeyyiI
+QeyyiI
 GhyyiG
 jCyyDj
 jwJJwj
 jEffFj
 GuffvG
-HfffvI
+RfffvI
 GuffvG
 jEffFj
 jjKKjj
 jnllMj
 GNlloG
-HlllLI
+SlllLI
 GBllzG
 jsllAj
 Ojjjjj

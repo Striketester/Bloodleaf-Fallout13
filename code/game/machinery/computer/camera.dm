@@ -1,7 +1,7 @@
 /obj/machinery/computer/security
 	name = "security camera console"
 	desc = "Used to access the various cameras in the Wasteland."
-	icon_screen = "cameras"
+	icon_screen = "terminal_on"
 	icon_keyboard = "security_key"
 	circuit = /obj/item/circuitboard/computer/security
 	var/last_pic = 1

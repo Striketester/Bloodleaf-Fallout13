@@ -88,8 +88,8 @@ GLOBAL_LIST_EMPTY(atmos_air_controllers)
 /obj/machinery/computer/atmos_control
 	name = "atmospherics monitoring"
 	desc = "Used to monitor the station's atmospherics sensors."
-	icon_screen = "tank"
-	icon_keyboard = "atmos_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	circuit = /obj/item/circuitboard/computer/atmos_control
 
 	var/frequency = FREQ_ATMOS_STORAGE

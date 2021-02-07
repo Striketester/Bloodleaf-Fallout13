@@ -207,6 +207,36 @@
 	icon_gib = "gib"
 	maxHealth = 100
 	health = 100
+/mob/living/simple_animal/hostile/dungemobs/ghoul/ncr
+	name = "Ghoul Trooper"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants. This one was once an NCR soldier."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "ncr_ghoul"
+	icon_living = "ncr_ghoul"
+	icon_dead = "ncr_ghoul_d"
+	icon_gib = "gib"
+	maxHealth = 50
+	health = 50
+	New()
+		..()
+		icon_state = "ncr_ghoul[rand(1,4)]"
+		icon_living = "[icon_state]"
+		icon_dead = "[icon_state]_d"
+/mob/living/simple_animal/hostile/dungemobs/ghoul/ncr/armored
+	name = "Armored Ghoul Trooper"
+	desc = "Have you ever seen a living ghoul before?<br>Ghouls are necrotic post-humans - decrepit, rotting, zombie-like mutants. This one was once an NCR soldier. Unluckily for you he died in his armor."
+	icon = 'icons/mob/wastemobs.dmi'
+	icon_state = "ncr_ghoul_armored"
+	icon_living = "ncr_ghoul_armored"
+	icon_dead = "ncr_ghoul_armored_d"
+	icon_gib = "gib"
+	maxHealth = 90
+	health = 90
+	New()
+		..()
+		icon_state = "ncr_ghoul_armored"
+		icon_living = "ncr_ghoul_armored"
+		icon_dead = "ncr_ghoul_armored_d"
 
 /mob/living/simple_animal/hostile/dungemobs/ghoul/scorched
 	name = "Scorched Ghoul Soldier"

@@ -1,7 +1,7 @@
 /obj/machinery/computer/cargo
 	name = "supply console"
 	desc = "Used to order supplies, approve requests, and control the CASP platform."
-	icon_screen = "supply"
+	icon_screen = "terminal_on"
 	circuit = /obj/item/circuitboard/computer/cargo
 	var/requestonly = FALSE
 	var/contraband = FALSE
@@ -15,7 +15,7 @@
 /obj/machinery/computer/cargo/request
 	name = "supply request console"
 	desc = "Used to request supplies from CASP platform."
-	icon_screen = "request"
+	icon_screen = "terminal_on"
 	circuit = /obj/item/circuitboard/computer/cargo/request
 	requestonly = TRUE
 

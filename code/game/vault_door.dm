@@ -18,7 +18,11 @@
 /obj/structure/vaultdoor/blob_act()
 	ex_act(4)
 	return
-
+/obj/structure/vaultdoor/Bumped(atom/movable/AM)
+	if(density)
+		return 0
+	else
+		return ..()
 /obj/structure/vaultdoor/ex_act(severity, target)
 	if(severity == 2)
 		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread

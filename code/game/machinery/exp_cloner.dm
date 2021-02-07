@@ -111,8 +111,8 @@
 /obj/machinery/computer/prototype_cloning
 	name = "prototype cloning console"
 	desc = "Used to operate an experimental cloner."
-	icon_screen = "dna"
-	icon_keyboard = "med_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	circuit = /obj/item/circuitboard/computer/prototype_cloning
 	var/obj/machinery/dna_scannernew/scanner = null //Linked scanner. For scanning.
 	var/list/pods //Linked experimental cloning pods

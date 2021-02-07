@@ -279,6 +279,7 @@
 	if(powernet)
 		set_panels(currentdir)
 	connect_to_network()
+	update()
 
 /obj/machinery/power/solar_control/Destroy()
 	for(var/obj/machinery/power/solar/M in connected_panels)
