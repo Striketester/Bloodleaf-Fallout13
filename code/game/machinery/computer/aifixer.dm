@@ -5,8 +5,8 @@
 	var/mob/living/silicon/ai/occupier = null
 	var/active = 0
 	circuit = /obj/item/circuitboard/computer/aifixer
-	icon_keyboard = "tech_key"
-	icon_screen = "ai-fixer"
+	icon_keyboard = ""
+	icon_screen = "terminal_on"
 	light_color = LIGHT_COLOR_PINK
 
 /obj/machinery/computer/aifixer/attackby(obj/I, mob/user, params)

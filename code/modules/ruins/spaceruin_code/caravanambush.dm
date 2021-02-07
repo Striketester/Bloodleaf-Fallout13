@@ -77,8 +77,8 @@
 /obj/machinery/computer/shuttle/caravan/pirate
 	name = "Pirate Cutter Shuttle Console"
 	desc = "Used to control the Pirate Cutter."
-	icon_screen = "syndishuttle"
-	icon_keyboard = "syndie_key"
+	icon_screen = "terminal_on"
+	icon_keyboard = ""
 	light_color = LIGHT_COLOR_RED
 	circuit = /obj/item/circuitboard/computer/caravan/pirate
 	shuttleId = "caravanpirate"

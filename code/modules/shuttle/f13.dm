@@ -10,7 +10,7 @@
 /obj/machinery/computer/shuttle/vaultelevator
 	name = "elevator controls"
 	desc = "Controls the elevator."
-	icon_screen = "shuttle"
+	icon_screen = "terminal_on"
 	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/vault_control
@@ -22,7 +22,7 @@
 /obj/machinery/computer/shuttle/enclavefortelevator
 	name = "platform controls"
 	desc = "Controls the platform."
-	icon_screen = "shuttle"
+	icon_screen = "terminal_on"
 	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/enclave_control
@@ -34,7 +34,7 @@
 /obj/machinery/computer/shuttle/boselevator
 	name = "elevator controls"
 	desc = "Controls the platform."
-	icon_screen = "shuttle"
+	icon_screen = "terminal_on"
 	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/bos_control
@@ -46,7 +46,7 @@
 /obj/machinery/computer/shuttle/bunkerelevator
 	name = "elevator controls"
 	desc = "Controls the elevator."
-	icon_screen = "shuttle"
+	icon_screen = "terminal_on"
 	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/bunker_control
@@ -58,7 +58,7 @@
 /obj/machinery/computer/shuttle/northbunkerelevator
 	name = "elevator controls"
 	desc = "Controls the elevator."
-	icon_screen = "shuttle"
+	icon_screen = "terminal_on"
 	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/northbunker_control
@@ -70,7 +70,7 @@
 /obj/machinery/computer/shuttle/miningelevator
 	name = "elevator controls"
 	desc = "Controls the elevator."
-	icon_screen = "shuttle"
+	icon_screen = "terminal_on"
 	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/mining_control
@@ -82,7 +82,7 @@
 /obj/machinery/computer/shuttle/vault113elevator
 	name = "vault 113 elevator controls"
 	desc = "Controls the elevator between the Vault and Oasis."
-	icon_screen = "shuttle"
+	icon_screen = "terminal_on"
 	icon_keyboard = ""
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/vault113_control

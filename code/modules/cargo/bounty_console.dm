@@ -3,7 +3,7 @@
 /obj/machinery/computer/bounty
 	name = "bounty console"
 	desc = "Used to check and claim bounties"
-	icon_screen = "bounty"
+	icon_screen = "terminal_on"
 	circuit = /obj/item/circuitboard/computer/bounty
 	light_color = "#E2853D"//orange
 	var/printer_ready = 0 //cooldown var
