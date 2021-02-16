@@ -30,6 +30,8 @@
 	blob_allowed = 0
 	environment = 19
 	grow_chance = 45
+/area/f13/wasteland/inside
+	outdoors = 0
 
 /area/f13/forest
 	name = "Forest"
@@ -76,6 +78,7 @@
 	'sound/f13ambience/ambigen_6.ogg','sound/f13ambience/ambigen_7.ogg','sound/f13ambience/ambigen_8.ogg','sound/f13ambience/ambigen_9.ogg')
 	environment = 2
 	grow_chance = 5
+	requires_power = TRUE
 
 /area/f13/farm
 	name = "Farm"
@@ -113,6 +116,7 @@
 	blob_allowed = 0
 	environment = 15
 	grow_chance = 5
+	requires_power = TRUE
 
 /area/f13/outpost
 	name = "Outpost"
@@ -150,6 +154,7 @@
 	blob_allowed = 0
 	environment = 16
 	grow_chance = 5
+	requires_power = TRUE
 
 /area/f13/citycaves
 	name = "City Caves"
@@ -466,7 +471,9 @@
 	blob_allowed = 0
 	environment = 4
 	grow_chance = 5
-	requires_power = FALSE
+	requires_power = TRUE
+/area/f13/ncr/outside
+	outdoors = 1
 
 /area/f13/legion
 	name = "Legion"
@@ -478,6 +485,7 @@
 	blob_allowed = 0
 	environment = 4
 	grow_chance = 5
+	requires_power = TRUE
 
 /area/f13/followers
 	name = "Followers of the Apocalypse"

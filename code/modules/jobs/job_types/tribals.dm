@@ -1,10 +1,10 @@
-/datum/job/tribal //do NOT use this for anything, it's just to store faction datums
+/datum/job/tribal//do NOT use this for anything, it's just to store faction datums
 	department_flag = TRIBAL
 	selection_color = "#ffeeaa"
 	forbids = "The use of pre-war technology, especially prewar weapons of war."
 	enforces = "The tribe operate as if they are a part of a singular clan. Any harm dealt upon another member is likened to harm placed upon your brother or sister. Above all things, the tribe comes first."
 	objectivesList = list("Leadership recommends the following goal for this week: Recruit worthy outlanders into the tribe","Leadership recommends the following goal for this week: Hunt dangerous creatures to improve the clan's standing", "Leadership recommends the following goal for this week: Preserve dangerous technology to prevent it from falling into the wrong hands.")
-
+	faction = list("village", "neutral", "gecko")
 /datum/outfit/job/tribal/
 	name = "TRIBALdatums"
 	jobtype = /datum/job/tribal/
@@ -32,7 +32,6 @@ Tribal Chief
 	title = "Chief"
 	flag = F13CHIEF
 	department_flag = TRIBAL
-	faction = "Village"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Elders of the tribe."

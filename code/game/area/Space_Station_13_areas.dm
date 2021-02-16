@@ -1385,7 +1385,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/f13/ncr_main
 	name = "NCR Mainbase"
 	icon_state = "ncr_main"
-	requires_power = TRUE
+	requires_power = FALSE
 
 /area/f13/raider_mall
 	name = "Raider Mall"

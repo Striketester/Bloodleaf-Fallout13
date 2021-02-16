@@ -212,8 +212,8 @@
 	user.setDir(olddir)
 
 /obj/item/disk/holodisk
-	name = "holorecord disk"
-	desc = "Stores recorder holocalls."
+	name = "holodisk"
+	desc = "Stores recorded holocalls."
 	icon_state = "holodisk"
 	obj_flags = UNIQUE_RENAME
 	materials = list(MAT_METAL = 100, MAT_GLASS = 100)

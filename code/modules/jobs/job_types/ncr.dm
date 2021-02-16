@@ -27,8 +27,8 @@ Colonel
 	head_announce = list("Security")
 	supervisors = "the general"
 	req_admin_notify = 1
-	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
-	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
+	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY, ACCESS_NCR_HIGH)
+	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY, ACCESS_NCR_HIGH)
 	total_positions = 0
 	spawn_positions = 0
 
@@ -73,8 +73,8 @@ Captain
 	description = "You are the commanding officer of your company and direct superior to the Veteran Ranger and Lieutenant. Coordinating with your staff, you must ensure that the objectives of High Command are completed to the letter. Working closely with your subordinates on logistics, mission planning and special operations with the Rangers, you are here to establish a strong foothold for the NCR within the region."
 	supervisors = "Colonel"
 	req_admin_notify = 1
-	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
-	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
+	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY, ACCESS_NCR_HIGH, ACCESS_NCR_MED)
+	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY, ACCESS_NCR_HIGH, ACCESS_NCR_MED)
 	outfit = /datum/outfit/job/ncr/f13captain
 
 	loadout_options = list(
@@ -181,9 +181,10 @@ Lieutenant
 	selection_color = "#fff5cc"
 
 	outfit = /datum/outfit/job/ncr/f13lieutenant
-
+	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY, ACCESS_NCR_HIGH, ACCESS_NCR_MED)
+	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY, ACCESS_NCR_HIGH, ACCESS_NCR_MED)
 	loadout_options = list(
-	/datum/outfit/loadout/ltmedic, //Grease gun, meds
+//	/datum/outfit/loadout/ltmedic, //Grease gun, meds
 	/datum/outfit/loadout/ltinf, //Assault carbine, extra ammo
 	/datum/outfit/loadout/ltscout //DKS, trekking
 //	/datum/outfit/loadout/ltmp // Pump riot, baton, beanbags
@@ -215,7 +216,7 @@ Lieutenant
 		/obj/item/twohanded/binocs=1, \
 		/obj/item/storage/bag/money/small/ncrofficers, \
 		/obj/item/clothing/mask/ncr_facewrap)
-
+/*
 /datum/outfit/loadout/ltmedic
 	name = "Medic"
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor/reinforced
@@ -231,7 +232,7 @@ Lieutenant
 		/obj/item/storage/firstaid/regular=1,
 		/obj/item/book/granter/trait/chemistry=1,
 		/obj/item/reagent_containers/hypospray/CMO=1)
-
+*/
 /datum/outfit/loadout/ltinf
 	name = "Infantry"
 	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced
@@ -268,6 +269,44 @@ Lieutenant
 		/obj/item/melee/classic_baton= 1
 	)
 */
+
+/*
+NCR Military Police
+*/
+
+
+/datum/job/ncr/f13ncrmp
+	title = "NCR Military Police"
+	flag = F13NCRMP
+	faction = "NCR"
+	total_positions = 2
+	spawn_positions = 2
+	description = "You are the primary enforcers of NCR law within the ranks of the local embassy. You are technically exempt from the standard chain of command, answering only to High-Command, and specifically, the NCR Office of Special Investigations (NCROSI). "
+	supervisors = "NCROSI"
+	selection_color = "#fff5cc"
+
+	outfit = /datum/outfit/job/ncr/f13ncrmp
+
+/datum/outfit/job/ncr/f13ncrmp
+	name = "NCR Military Police"
+	jobtype = /datum/job/ncr/f13ncrmp
+	id = 			/obj/item/card/id/dogtag/ncrmp
+	uniform =  		/obj/item/clothing/under/f13/ncr
+	accessory =     /obj/item/clothing/accessory/armband/black
+	head = 			/obj/item/clothing/head/f13/ncr/mp
+	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
+	suit_store = 	/obj/item/gun/ballistic/shotgun/sc_pump
+	r_hand = 		/obj/item/melee/classic_baton
+	belt =          /obj/item/storage/belt/military/NCR_Bandolier
+	glasses = 		null
+	backpack_contents = list(
+		/obj/item/kitchen/knife/combat=1, \
+		/obj/item/restraints/handcuffs=1, \
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/storage/bag/money/small/ncrenlisted, \
+		/obj/item/storage/box/rubbershot = 1, \
+		/obj/item/storage/box/rubbershot/beanbag =1, \
+		)
 /*
 Sergeant
 */
@@ -281,7 +320,8 @@ Sergeant
 	description = "You are the direct superior to the enlisted troops, working with the chain of command you echo the orders of your superiors and ensure that the enlisted follow them to the letter. Additionally, you are responsible for the wellbeing of the troops and their ongoing training with the NCR."
 	supervisors = "Lieutenants and above"
 	selection_color = "#fff5cc"
-
+	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY, ACCESS_NCR_MED)
+	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY, ACCESS_NCR_MED)
 	outfit = /datum/outfit/job/ncr/f13sergeant
 
 	loadout_options = list(
@@ -527,44 +567,6 @@ NCR Heavy Trooper
 		/obj/item/clothing/accessory/ncr/SGT=1,
 		)
 */
-
-/*
-NCR Military Police
-*/
-
-
-/datum/job/ncr/f13ncrmp
-	title = "NCR Military Police"
-	flag = F13NCRMP
-	faction = "NCR"
-	total_positions = 2
-	spawn_positions = 2
-	description = "You are the primary enforcers of NCR law within the ranks of the local embassy. You are technically exempt from the standard chain of command, answering only to High-Command, and specifically, the NCR Office of Special Investigations (NCROSI). "
-	supervisors = "NCROSI"
-	selection_color = "#fff5cc"
-
-	outfit = /datum/outfit/job/ncr/f13ncrmp
-
-/datum/outfit/job/ncr/f13ncrmp
-	name = "NCR Military Police"
-	jobtype = /datum/job/ncr/f13ncrmp
-	id = 			/obj/item/card/id/dogtag/ncrmp
-	uniform =  		/obj/item/clothing/under/f13/ncr
-	accessory =     /obj/item/clothing/accessory/armband/black
-	head = 			/obj/item/clothing/head/f13/ncr/mp
-	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor
-	suit_store = 	/obj/item/gun/ballistic/shotgun/sc_pump
-	r_hand = 		/obj/item/melee/classic_baton
-	belt =          /obj/item/storage/belt/military/NCR_Bandolier
-	glasses = 		null
-	backpack_contents = list(
-		/obj/item/kitchen/knife/combat=1, \
-		/obj/item/restraints/handcuffs=1, \
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
-		/obj/item/storage/bag/money/small/ncrenlisted, \
-		/obj/item/storage/box/rubbershot = 1, \
-		/obj/item/storage/box/rubbershot/beanbag =1, \
-		)
 
 
 /*

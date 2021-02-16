@@ -352,7 +352,8 @@
 	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
-	faction = list("ncr", "city", "followers", "vault")
+	faction = list("NCR", "city", "followers", "vault")
+	ranged_cooldown_time = 2
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
@@ -383,9 +384,9 @@
 	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
 	healable = 1
 	ranged = 1
-	projectiletype = /obj/item/projectile/bullet/F13/c308mmBullet
+	projectiletype = /obj/item/projectile/bullet/F13/c556Bullet
 	projectilesound = 'sound/weapons/garandshot.ogg'
-	casingtype = /obj/item/ammo_casing/F13/m308
+	casingtype = /obj/item/ammo_casing/F13/a556
 	New()
 		..()
 		icon_state = "ncr_trooper[rand(1,5)]"

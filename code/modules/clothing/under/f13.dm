@@ -36,7 +36,12 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
 //NCR
-
+/obj/item/clothing/under/color/white/f13/ncr_eng
+	name = "ncr engineering coveralls"
+	desc = "A suit of coveralls commonly worn by engineers in the NCR"
+	icon_state = "ncr_eng"
+	item_state = "w_suit"
+	item_color = "ncr_eng"
 /obj/item/clothing/under/f13/ncr
 	name = "NCR desert fatigues"
 	desc = "A set of standard issue New California Republic trooper fatigues."

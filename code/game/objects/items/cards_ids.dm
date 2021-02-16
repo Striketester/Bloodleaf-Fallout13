@@ -537,7 +537,7 @@ update_label("John Doe", "Clowny")
 
 /obj/item/card/id/dogtag/ncrmp
 	name = "military police tags"
-	desc = "A dog tag that associates one with the NCROSI."
+	desc = "A dog tag that associates one with the NCROSI, bearing the rank of staff sergeant."
 	icon_state = "ncrdogtagrecruit"
 
 /obj/item/card/id/dogtag/ncrht

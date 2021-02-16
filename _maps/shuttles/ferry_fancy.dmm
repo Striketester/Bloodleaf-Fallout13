@@ -1,10 +1,11 @@
 "a" = (/turf/open/floor/f13/wood,/area/shuttle/transport)
 "b" = (/obj/machinery/computer/shuttle/ferry/request{dir = 8},/obj/structure/table/wood/settler,/turf/open/floor/f13/wood,/area/shuttle/transport)
+"c" = (/obj/docking_port/mobile{dir = 4; dwidth = 5; height = 5; name = "ferry"; width = 5},/turf/open/floor/f13/wood,/area/shuttle/transport)
 
 (1,1,1) = {"
 aaaaa
 aaaaa
 aabaa
 aaaaa
-aaaaa
+caaaa
 "}
