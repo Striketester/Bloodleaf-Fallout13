@@ -535,6 +535,12 @@ update_label("John Doe", "Clowny")
 	desc = "A dog tag proving enlistment."
 	icon_state = "ncrdogtagrecruit"
 
+/obj/item/card/id/dogtag/ncrtrooper/frumentarii
+	name = "trooper's tags"
+	desc = "A dog tag proving enlistment."
+	icon_state = "ncrdogtagrecruit"
+	assignment = "NCR Trooper"
+
 /obj/item/card/id/dogtag/ncrmp
 	name = "military police tags"
 	desc = "A dog tag that associates one with the NCROSI, bearing the rank of staff sergeant."

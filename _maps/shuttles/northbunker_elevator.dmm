@@ -11,6 +11,7 @@
 /area/shuttle/northbunker_elevator)
 "c" = (
 /obj/machinery/computer/shuttle/northbunkerelevator,
+/obj/structure/table,
 /turf/open/floor/engine,
 /area/shuttle/northbunker_elevator)
 "d" = (

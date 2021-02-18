@@ -528,6 +528,46 @@ Vexillarius
 		/obj/item/grenade/plastic/c4=1
 		)
 /*
+frumentarii
+*/
+/datum/job/CaesarsLegion/Legionnaire/f13frumentarii
+	title = "Frumentarii"
+	flag = F13FRUMENTARII
+	faction = list("NCR", "Legion")
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are considered the main espionage unit of the Legion. You answer to everyone above you in the chain of command, taking orders from your contacts within the Local Legion Army, directly and obeying all commands given by superiors. Stay well hidden, the NCR are not to know of your presence. Leak information to the Legion. :e is your legion key in your NCR radio headset."
+	supervisors = "Corporals and above/Vexillarius an above"
+	selection_color = "#fff5cc"
+	exp_requirements = 12
+	access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
+	minimal_access = list(ACCESS_NCR, ACCESS_NCROFFDUTY)
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13frumentarii
+/datum/job/CaesarsLegion/Legionnaire/f13frumentarii/after_spawn(mob/living/carbon/human/H, mob/M)
+	H.add_quirk("Hard Yards")
+	H.add_quirk("Big Leagues")
+	H.add_quirk("Iron Fist")
+	H.add_quirk("Light Step")
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13frumentarii
+	name = "NCR trooper"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13frumentarii
+	id = 			/obj/item/card/id/dogtag/ncrtrooper/frumentarii
+	uniform =  		/obj/item/clothing/under/f13/ncr
+	accessory =     /obj/item/clothing/accessory/ncr/TPR
+	head = 			/obj/item/clothing/head/f13/ncr/goggles
+	suit = 			/obj/item/clothing/suit/armor/f13/ncrarmor/mantle
+	suit_store = 	/obj/item/gun/ballistic/automatic/marksman/servicerifle
+	belt =          /obj/item/storage/belt/military/assault/ncr
+	ears =			/obj/item/radio/headset/headset_ncr/frumentarii
+	glasses = 		null
+	backpack_contents = list(
+		/obj/item/kitchen/knife/combat/survival=1, \
+		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
+		/obj/item/stack/medical/gauze=1, \
+		/obj/item/storage/bag/money/small/ncrenlisted, \
+		/obj/item/clothing/mask/ncr_facewrap, \
+		/obj/item/ammo_box/magazine/m556/rifle=4)
+/*
 Slavemaster
 */
 
@@ -637,7 +677,6 @@ Veteran Legionary
 /datum/job/CaesarsLegion/Legionnaire/f13vetlegionary/after_spawn(mob/living/carbon/human/H, mob/M)
 	H.add_quirk("Big Leagues")
 	H.add_quirk("Hard Yards")
-
 /*
 Prime Legionary
 */

@@ -547,6 +547,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "Prime Legionary"
 	icon_state = "Veteran Legionnaire"
 
+/obj/effect/landmark/start/f13/frumentarii
+	name = "Frumentarii"
+	icon_state = "Veteran Legionnaire"
+
 /obj/effect/landmark/start/f13/decanrec
 	name = "Legion Recruit Decanus"
 	icon_state = "Decanus"
