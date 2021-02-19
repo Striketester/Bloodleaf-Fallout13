@@ -320,6 +320,9 @@ Raider
 	name = "NCR Deserter"
 	suit = /obj/item/clothing/suit/armor/f13/exile/ncrexile
 	uniform = /obj/item/clothing/under/f13/exile
+	shoes = /obj/item/clothing/shoes/f13/military/ncr
+	gloves = /obj/item/clothing/gloves/f13/ncr
+	head = /obj/item/clothing/head/f13/ncr/goggles
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/marksman/servicerifle=1,

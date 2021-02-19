@@ -115,3 +115,5 @@
 #define ACCESS_BLOODCULT 250
 #define ACCESS_CLOCKCULT 251
 
+#define ACCESS_NCR_HIGH			252 //high NCR access
+#define ACCESS_NCR_MED			253 //medium NCR access

@@ -3,7 +3,7 @@
 	desc = "Used to remotely control the flow of power to different parts of the station."
 	icon_screen = "terminal_on"
 	icon_keyboard = ""
-	req_access = list(ACCESS_ENGINE)
+	req_access = list(ACCESS_ENGINE || ACCESS_NCR)
 	circuit = /obj/item/circuitboard/computer/apc_control
 	light_color = LIGHT_COLOR_YELLOW
 	var/mob/living/operator //Who's operating the computer right now

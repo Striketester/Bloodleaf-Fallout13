@@ -23,8 +23,7 @@
 
 /datum/map_template/proc/preload_size(path)
 	var/datum/parsed_map/parsed = maploader.load_map(file(path), 1, 1, 1, cropMap=FALSE, measureOnly=TRUE)
-	var/bounds
-	bounds = parsed?.bounds
+	var/bounds = parsed?.bounds
 	if(bounds)
 		width = bounds[MAP_MAXX] // Assumes all templates are rectangular, have a single Z level, and begin at 1,1,1
 		height = bounds[MAP_MAXY]
@@ -87,8 +86,7 @@
 		return
 
 	var/datum/parsed_map/parsed = maploader.load_map(file(mappath), T.x, T.y, T.z, cropMap=TRUE, no_changeturf=(SSatoms.initialized == INITIALIZATION_INSSATOMS), placeOnTop=TRUE)
-	var/list/bounds
-	bounds = parsed?.bounds
+	var/list/bounds = parsed?.bounds
 	if(!bounds)
 		return
 

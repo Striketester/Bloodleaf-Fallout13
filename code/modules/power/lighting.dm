@@ -835,11 +835,11 @@
 	base_state = "lamppost1"
 	desc = "a post supporting a usually outdoor lamp or lantern."
 	brightness = 8
-	active_power_usage = 0
+	active_power_usage = 5
 	density = 0
 	layer = WALL_OBJ_LAYER
 	nightshift_allowed = FALSE
-	start_with_cell = FALSE
+	start_with_cell = TRUE
 	no_emergency = TRUE
 
 /obj/machinery/light/proc/night_update() //gah, cant have procs with same name from parent

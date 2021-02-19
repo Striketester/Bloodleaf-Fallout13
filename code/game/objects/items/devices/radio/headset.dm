@@ -254,6 +254,53 @@ obj/item/radio/headset/attackby(obj/item/W, mob/user, params)
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_EARS))
 
+/obj/item/radio/headset/headset_ncr/frumentarii
+	name = "NCR radio headset"
+	desc = "This is used by the New California Republic.\nTo access the NCR channel, use :w."
+	icon_state = "mine_headset"
+	keyslot = new /obj/item/encryptionkey/headset_ncr
+	keyslot2 = new /obj/item/encryptionkey/headset_legion
+
+
+/obj/item/radio/headset/headset_ncr/frumentarii/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_EARS))
+
+/obj/item/radio/headset/headset_ncr/frumentarii/attackby(obj/item/W, mob/user, params)
+	user.set_machine(src)
+
+	if(istype(W, /obj/item/screwdriver))
+		if(keyslot || keyslot2)
+			for(var/ch_name in channels)
+				SSradio.remove_object(src, GLOB.radiochannels[ch_name])
+				secure_radio_connections[ch_name] = null
+
+			var/turf/T = user.drop_location()
+			if(T)
+				if(keyslot)
+					keyslot.forceMove(T)
+					keyslot = null
+				if(keyslot2)
+					to_chat(user, "<span class='warning'>This headset doesn't have any unique encryption keys!  How useless...</span>")
+					return
+			recalculateChannels()
+			to_chat(user, "<span class='notice'>You pop out the encryption key in the headset.</span>")
+
+		else
+			to_chat(user, "<span class='warning'>This headset doesn't have any unique encryption keys!  How useless...</span>")
+
+	else if(istype(W, /obj/item/encryptionkey))
+		if(keyslot && keyslot2)
+			to_chat(user, "<span class='warning'>The headset can't hold another key!</span>")
+			return
+
+		if(!keyslot)
+			if(!user.transferItemToLoc(W, src))
+				return
+			keyslot = W
+		recalculateChannels()
+	else
+		return ..()
 /obj/item/radio/headset/headset_legion
 	name = "Legion radio headset"
 	desc = "This is used by Caesar's Legion.\nTo access the Legion channel, use :e."

@@ -82,6 +82,7 @@
 #define F13AUXILIA		(1<<13)
 #define F13CAMPFOLLOWER	(1<<14)
 #define F13SLAVEMASTER	(1<<15)
+#define F13FRUMENTARII	(1<<16)
 
 #define BOS				(1<<5)
 
