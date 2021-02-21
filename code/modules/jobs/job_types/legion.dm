@@ -560,6 +560,8 @@ frumentarii
 	belt =          /obj/item/storage/belt/military/assault/ncr
 	ears =			/obj/item/radio/headset/headset_ncr/frumentarii
 	glasses = 		null
+	shoes = /obj/item/clothing/shoes/f13/military/ncr
+	gloves = /obj/item/clothing/gloves/f13/ncr
 	backpack_contents = list(
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/reagent_containers/pill/patch/healingpowder=2, \
