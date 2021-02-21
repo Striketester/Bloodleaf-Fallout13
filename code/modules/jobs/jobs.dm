@@ -110,7 +110,6 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "NCR Military Police",
 "NCR Heavy Trooper",
 "NCR Trooper",
-
 "Hunter"
 
 ))
@@ -172,6 +171,7 @@ GLOBAL_LIST_INIT(legion_positions, list(
 //	"Legion Recruit Decanus",
     "Recruit Legionary",
     "Legion Vexillarius",
+    "Frumentarii",
     "Legion Explorer",
     "Legion Slavemaster",
     "Auxilia",

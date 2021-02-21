@@ -274,7 +274,10 @@
 			C.access = J.get_access()
 		shuffle_inplace(C.access) // Shuffle access list to make NTNet passkeys less predictable
 		C.registered_name = H.real_name
-		if(J)
+		if(J.title == "Frumentarii")
+			J.title = "NCR Trooper"
+			C.assignment = J.title
+		else
 			C.assignment = J.title
 		C.update_label()
 		H.sec_hud_set_ID()

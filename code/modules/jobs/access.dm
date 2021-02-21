@@ -325,6 +325,10 @@
 			return "BOS Access"
 		if(ACCESS_NCR)
 			return "NCR Access"
+		if(ACCESS_NCR_MED)
+			return "NCR Medium Access"
+		if(ACCESS_NCR_HIGH)
+			return "NCR High Access"
 		if (ACCESS_NCROFFDUTY)
 			return "NCR Off-Duty Access"
 
