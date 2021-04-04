@@ -277,6 +277,16 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/lasergatling
+	name = "Laser Gatling"
+	desc = "A back mounted energypack connected to a laser gatling gun."
+	id = "lasergatling"
+	build_type = PROTOLATHE
+	materials = list(MAT_GOLD = 5000, MAT_URANIUM = 4000, MAT_METAL = 10000, MAT_TITANIUM = 2000)
+	build_path = /obj/item/minigunpack
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /*
 /datum/design/xray
 	name = "Xray Laser Gun"
@@ -342,6 +352,33 @@
 	build_path = /obj/item/stock_parts/cell/ammo/ecp
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/plasma_rifle
+	name = "Plasma Rifle"
+	desc = "A rifle that shoots resonant plasma."
+	id = "plasma_rifle"
+	build_type = PROTOLATHE
+	build_path = /obj/item/gun/energy/laser/plasma
+	materials = list(MAT_GOLD = 5000, MAT_URANIUM = 4000, MAT_METAL = 5000, MAT_TITANIUM = 2000)
+	category = list("Weapons")
+
+/datum/design/plasma_pistol
+	name = "Plasma Pistol"
+	desc = "A pistol that shoots resonant plasma."
+	id = "plasma_pistol"
+	build_type = PROTOLATHE
+	build_path = /obj/item/gun/energy/laser/plasma/pistol
+	materials = list(MAT_GOLD = 2000, MAT_URANIUM = 1000, MAT_METAL = 2000, MAT_TITANIUM = 500)
+	category = list("Weapons")
+
+/datum/design/plasma_scatter
+	name = "Multiplas rifle"
+	desc = "A plasma rifle that shoots multiple shots of resonant plasma."
+	id = "plasma_scatter"
+	build_type = PROTOLATHE
+	build_path = /obj/item/gun/energy/laser/plasma/scatter
+	materials = list(MAT_GOLD = 5000, MAT_URANIUM = 4000, MAT_METAL = 5000, MAT_TITANIUM = 2000)
+	category = list("Weapons")
 
 //Weapon Mags
 

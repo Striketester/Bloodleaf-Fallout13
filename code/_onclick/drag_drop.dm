@@ -140,6 +140,9 @@
 	return
 
 /client/MouseDrop(src_object, over_object, src_location, over_location, src_control, over_control, params)
+	var/obj/item/clothing/suit/armor/f13/power_armor/PA
+	if (src_object == PA)
+		return
 	if (middragatom == src_object)
 		middragtime = 0
 		middragatom = null

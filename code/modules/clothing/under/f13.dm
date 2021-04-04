@@ -42,6 +42,8 @@
 	icon_state = "ncr_eng"
 	item_state = "w_suit"
 	item_color = "ncr_eng"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 30, "fire" = 40, "acid" = 50)
+
 /obj/item/clothing/under/f13/ncr
 	name = "NCR desert fatigues"
 	desc = "A set of standard issue New California Republic trooper fatigues."

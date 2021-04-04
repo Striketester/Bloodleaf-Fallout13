@@ -921,31 +921,80 @@
 	flags_inv = HIDEJUMPSUIT
 	item_flags = SLOWS_WHILE_IN_HAND
 	clothing_flags = THICKMATERIAL
-	equip_delay_self = 50
-	equip_delay_other = 60
+	equip_delay_self = 0
+	equip_delay_other = 0
 	strip_delay = 200
+	max_integrity = 500
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	density = TRUE
+	anchored = TRUE
 	var/emped = 0
 	var/requires_training = TRUE
+	var/obj/item/tank/jetpack/suit/jetpack = null
+/obj/item/clothing/suit/armor/f13/power_armor/Initialize()
+	. = ..()
+	interaction_flags_item &= ~INTERACT_ITEM_ATTACK_HAND_PICKUP
+	if(jetpack && ispath(jetpack))
+		jetpack = new jetpack(src)
 
+//It's a suit of armor, it ain't going to fall over just because the pilot is dead
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
-    var/mob/living/carbon/human/H = user
-    if(src == H.wear_suit) //Suit is already equipped
-        return TRUE
-    if (!H.has_trait(TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
-        to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
-        return 0
-    if(slot == SLOT_WEAR_SUIT)
-        H.add_trait(TRAIT_STUNIMMUNE)
-        H.add_trait(TRAIT_PUSHIMMUNE)
-        return ..()
-
-/obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
 	var/mob/living/carbon/human/H = user
-	H.remove_trait(TRAIT_STUNIMMUNE)
-	H.remove_trait(TRAIT_PUSHIMMUNE)
-	return ..()
+	if(src == H.wear_suit) //Suit is already equipped
+		return FALSE
+	if (!H.has_trait(TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
+		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
+		return FALSE
+	return TRUE
+/obj/item/clothing/suit/armor/f13/power_armor/attack_hand(mob/living/carbon/human/user)
+	if(!istype(user))
+		return FALSE
+	if(user.wear_suit == src)
+		to_chat(user, "You begin exiting the [src].")
+		if(do_after(user, 6 SECONDS, target = user) && user.wear_suit == src)
+			GetOutside(user)
+			return TRUE
+/obj/item/clothing/suit/armor/f13/power_armor/MouseDrop_T(mob/living/carbon/human/user, slot)
+	if(!istype(user))
+		return FALSE
+	if (!user.has_trait(TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
+		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
+		return FALSE
+	if(user.wear_suit && user.wear_suit != src)
+		to_chat(user, "You're unable to climb into the [src] due to already have a suit equipped!")
+		return FALSE
 
+	else
+		if(user.wear_suit == src)
+			to_chat(user, "You begin exiting the [src].")
+			if(do_after(user, 6 SECONDS, target = user) && user.wear_suit == src)
+				GetOutside(user)
+				return TRUE
+	to_chat(user, "You begin entering the [src].")
+	if(do_after(user, 6 SECONDS, target = user) && user.wear_suit != src)
+		GetInside(user)
+		return TRUE
+	return FALSE
+/obj/item/clothing/suit/armor/f13/power_armor/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(prob(50))
+		var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread
+		spark_system.start()
+	..()
+/obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	H.remove_trait(user,TRAIT_STUNIMMUNE)
+	H.remove_trait(user,TRAIT_PUSHIMMUNE)
+	if(jetpack)
+		for(var/X in jetpack.actions)
+			var/datum/action/A = X
+			A.Remove(user)
+	return ..()
+/obj/item/clothing/suit/space/hardsuit/power_armor/equipped(mob/user, slot)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	H.add_trait(TRAIT_STUNIMMUNE)
+	H.add_trait(TRAIT_PUSHIMMUNE)
 /obj/item/clothing/suit/armor/f13/power_armor/emp_act(mob/living/carbon/human/owner, severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
@@ -961,6 +1010,56 @@
 				slowdown -= 15
 				armor = armor.modifyRating(melee = 20, bullet = 20, laser = 20)
 				emped = 0
+
+/obj/item/clothing/suit/armor/f13/power_armor/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/tank/jetpack/suit))
+		if(jetpack)
+			to_chat(user, "<span class='warning'>[src] already has a jetpack installed.</span>")
+			return
+		if(src == user.get_item_by_slot(SLOT_WEAR_SUIT)) //Make sure the player is not wearing the suit before applying the upgrade.
+			to_chat(user, "<span class='warning'>You cannot install the upgrade to [src] while wearing it.</span>")
+			return
+
+		if(user.transferItemToLoc(I, src))
+			jetpack = I
+			to_chat(user, "<span class='notice'>You successfully install the jetpack into [src].</span>")
+			return
+	else if(istype(I, /obj/item/screwdriver))
+		if(!jetpack)
+			to_chat(user, "<span class='warning'>[src] has no jetpack installed.</span>")
+			return
+		if(src == user.get_item_by_slot(SLOT_WEAR_SUIT))
+			to_chat(user, "<span class='warning'>You cannot remove the jetpack from [src] while wearing it.</span>")
+			return
+
+		jetpack.turn_off()
+		jetpack.forceMove(drop_location())
+		jetpack = null
+		to_chat(user, "<span class='notice'>You successfully remove the jetpack from [src].</span>")
+		return
+	else if ((istype(I, /obj/item/pa_hydraulics) && src.requires_training == FALSE))
+		var/mob/living/carbon/human/H
+		if (do_after(user, 12 SECONDS, target = user) && H.wear_suit != src)
+			to_chat(user, "<span class='notice'>You install the hydraulics into the [src].</span>")
+			src.slowdown = 0.4
+			src.armor = armor.modifyRating("melee" = 65, "bullet" = 60, "laser" = 45, "energy" = 55, "bomb" = 60, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+			src.requires_training = TRUE
+	return ..()
+/obj/item/clothing/suit/armor/f13/power_armor/proc/GetInside(mob/living/carbon/human/user)
+	if(!istype(user))
+		return
+	density = FALSE
+	anchored = FALSE
+	user.visible_message("<span class='warning'>[user] enters the [src]!</span>")
+	user.forceMove(get_turf(src))
+	user.equip_to_slot_if_possible(src, SLOT_WEAR_SUIT)
+
+/obj/item/clothing/suit/armor/f13/power_armor/proc/GetOutside(mob/living/carbon/human/user)
+	user.visible_message("<span class='warning'>[user] exits from the [src].</span>")
+	playsound(src.loc, 'sound/mecha/mechmove03.ogg', 50, TRUE)
+	user.dropItemToGround(src, force = TRUE)
+	density = TRUE
+	anchored = TRUE
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "salvaged T-45b power armor"
@@ -1011,7 +1110,7 @@
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	armor = list("melee" = 65, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 70, "laser" = 50, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/gunslinger
 	name = "Gunslinger T-51b"
@@ -1041,7 +1140,7 @@
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
 	slowdown = 0.16
-	armor = list("melee" = 75, "bullet" = 70, "laser" = 60, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 70, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
@@ -1049,7 +1148,7 @@
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
 	slowdown = 0.15 //+0.1 from helmet = total 0.25
-	armor = list("melee" = 70, "bullet" = 65, "laser" = 55, "energy" = 65, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 85, "bullet" = 80, "laser" = 55, "energy" = 65, "bomb" = 82, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/ultra
 	name = "Ultracite power armor"
@@ -1063,7 +1162,7 @@
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
-	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 75, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2
 	name = "advanced power armor mark II"
@@ -1071,14 +1170,14 @@
 	icon_state = "advpowerarmor2"
 	item_state = "advpowerarmor2"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 90, "bullet" = 90, "laser" = 60, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 95, "bullet" = 95, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/tesla
 	name = "tesla power armor"
 	desc = "A variant of the Enclave's advanced power armor Mk I, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks.<br>As it's made of complex composite materials designed to block most of energy damage - it's notably weaker against kinetic impacts."
 	icon_state = "tesla"
 	item_state = "tesla"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 75, "bullet" = 75, "laser" = 110, "energy" = 110, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
 	name = "midwestern power armor"
@@ -1230,15 +1329,15 @@
 /obj/item/clothing/suit/armor/f13/ncrarmor/reinforced
 	name = "NCR reinforced patrol vest"
 	desc = "A standard issue NCR Infantry vest reinforced with a groinpad."
-	icon_state = "ncr_reinforced_vest"
-	item_state = "ncr_reinforced_vest"
+	icon_state = "ncr_infantry_vest"
+	item_state = "ncr_infantry_vest"
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/mantle/reinforced
 	name = "NCR reinforced mantle vest"
 	desc = "A standard issue NCR Infantry vest reinforced with a groinpad and a mantle."
-	icon_state = "ncr_reinforced_mantle"
-	item_state = "ncr_reinforced_mantle"
+	icon_state = "ncr_standard_mantle"
+	item_state = "ncr_standard_mantle"
 	armor = list("melee" = 55, "bullet" = 45, "laser" = 35, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/labcoat
@@ -1252,8 +1351,8 @@
 /obj/item/clothing/suit/armor/f13/ncrarmor/captain
 	name = "NCR reinforced officer vest"
 	desc = "A heavily reinforced set of NCR mantle armour, the armor has been heavily patched and given ceramic inserts in vital areas to protect the wearer. The design indicates it belongs to a high ranking NCR officer."
-	icon_state = "ncr_captain_armour"
-	item_state = "ncr_captain_armour"
+	icon_state = "ncr_standard_mantle"
+	item_state = "ncr_standard_mantle"
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 40, "energy" = 20, "bomb" = 50, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/scout

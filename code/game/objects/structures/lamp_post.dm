@@ -8,7 +8,7 @@
 	light_power = 0
 	light_range = 0
 	var/on_power = 1.6
-	var/on_range = 4.5
+	var/on_range = 6.5
 
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	layer = GASFIRE_LAYER

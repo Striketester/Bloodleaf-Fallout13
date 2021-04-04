@@ -104,7 +104,7 @@
 	display_name = "Advanced Engineering"
 	description = "Pushing the boundaries of physics, one chainsaw-fist at a time."
 	prereq_ids = list("engineering", "emp_basic")
-	design_ids = list("engine_goggles", "magboots", "weldingmask")
+	design_ids = list("engine_goggles", "magboots", "weldingmask", "pa_part")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -153,6 +153,15 @@
 	description = "Research on how to fully exploit the power of plasma."
 	prereq_ids = list("basic_plasma")
 	design_ids = list("mech_plasma_cutter")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 5000
+
+/datum/techweb_node/plasma_weaponry
+	id = "plasma_weaponry"
+	display_name = "Plasma Weaponry Research"
+	description = "Research on how to fully exploit the power of plasma."
+	prereq_ids = list("basic_plasma", "adv_weaponry")
+	design_ids = list("plasma_rifle", "plasma_pistol", "plasma_scatter", "lasergatling")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -339,7 +348,7 @@
 	export_price = 5000
 
 
-
+/*
 /datum/techweb_node/NVGtech
 	id = "NVGtech"
 	display_name = "Night Vision Technology"
@@ -348,7 +357,7 @@
 	design_ids = list()
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	export_price = 5000
-
+*/
 
 ////////////////////////Medical////////////////////////
 /*/datum/techweb_node/cloning
@@ -484,7 +493,7 @@
 	display_name = "Advanced Weapon Development Technology"
 	description = "Our weapons are breaking the rules of reality by now."
 	prereq_ids = list("adv_engi", "weaponry")
-	design_ids = list("pin_loyalty", "ecp")
+	design_ids = list("pin_loyalty", "ecp", "laserrifle", "wattzlaserpistol", "laserpistol")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
