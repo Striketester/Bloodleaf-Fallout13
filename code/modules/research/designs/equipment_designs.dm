@@ -41,3 +41,14 @@
 	construction_time = 100
 	category = list("Misc")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+
+/datum/design/power_armor_rigging
+	name = "Power Armor Hydraulics"
+	desc = "The inner workings to a suit of powerarmor, making the wearer require training."
+	id = "pa_part"
+	build_type = PROTOLATHE
+	build_path = /obj/item/pa_hydraulics
+	materials = list(MAT_METAL=10000)	//This expensive enough for you?
+	construction_time = 250
+	category = list("Misc")
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING

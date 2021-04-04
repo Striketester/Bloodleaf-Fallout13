@@ -263,3 +263,13 @@
 	throw_range = 3
 	w_class = WEIGHT_CLASS_BULKY
 	attack_verb = list("bashed")
+
+
+//////////////////////PA PARTS//////////////////////////////
+/obj/item/pa_hydraulics
+	name = "Power Armor Hydraulics"
+	desc = "The inner workings to a suit of powerarmor, making the wearer require training.."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "pa_hydro"
+	flags_1 = CONDUCT_1
+	materials = list(MAT_METAL=2000)

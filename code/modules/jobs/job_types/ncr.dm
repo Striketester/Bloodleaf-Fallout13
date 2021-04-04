@@ -79,7 +79,7 @@ Captain
 
 	loadout_options = list(
 	/datum/outfit/loadout/captinf, //Unique R82 assault rifle
-	/datum/outfit/loadout/captscout, //Unique scoped m1 garand
+//	/datum/outfit/loadout/captscout, //Unique scoped m1 garand
 	)
 
 /datum/outfit/job/ncr/f13captain/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -186,7 +186,7 @@ Lieutenant
 	loadout_options = list(
 //	/datum/outfit/loadout/ltmedic, //Grease gun, meds
 	/datum/outfit/loadout/ltinf, //Assault carbine, extra ammo
-	/datum/outfit/loadout/ltscout //DKS, trekking
+//	/datum/outfit/loadout/ltscout //DKS, trekking
 //	/datum/outfit/loadout/ltmp // Pump riot, baton, beanbags
 	)
 
@@ -326,9 +326,9 @@ Sergeant
 
 	loadout_options = list(
 	/datum/outfit/loadout/sgtinf, //Service rifle, extra ammo
-	/datum/outfit/loadout/sgtscout, //Marksman rifle
+//	/datum/outfit/loadout/sgtscout, //Marksman rifle
 //	/datum/outfit/loadout/sgtmp, //Drum riot shotgun, baton, beanbags
-	/datum/outfit/loadout/sgtmech //Salvaged power armor, LMG
+//	/datum/outfit/loadout/sgtmech //Salvaged power armor, LMG
 	)
 
 /datum/outfit/job/ncr/f13sergeant
@@ -416,7 +416,7 @@ Corporal
 	loadout_options = list(
 	/datum/outfit/loadout/specmedic, //Medkit, medHUD, patches, needler
 	/datum/outfit/loadout/speceng, //C4, toolbelt, welding goggles
-	/datum/outfit/loadout/specscout, //Scoped hunting rifle, binoculars
+//	/datum/outfit/loadout/specscout, //Scoped hunting rifle, binoculars
 //	/datum/outfit/loadout/specmp, //Hunting shotgun, baton, beanbags
 	///datum/outfit/loadout/specmech //Power armor, assault rifle
 	)
@@ -713,8 +713,8 @@ Recruit
 	loadout_options = list(
 	/datum/outfit/loadout/brahminbaron,
 	/datum/outfit/loadout/sharecropper,
-	/datum/outfit/loadout/mechanic,
-	/datum/outfit/loadout/offduty
+	/datum/outfit/loadout/eng,
+	/datum/outfit/loadout/doc
 	)
 
 /datum/outfit/job/ncr/f13ncrcitizen
@@ -722,9 +722,6 @@ Recruit
 	id = /obj/item/card/id/dogtag/town
 	uniform = /obj/item/clothing/under/f13/caravaneer
 	shoes = /obj/item/clothing/shoes/f13/tan
-	head = /obj/item/clothing/head/f13/cowboy
-	gloves = /obj/item/clothing/gloves/color/brown
-	glasses = /obj/item/clothing/glasses/orange
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/wastelander)
 
@@ -752,26 +749,27 @@ Recruit
 		/obj/item/hatchet=1
 		)
 
-/datum/outfit/loadout/mechanic
-	name = "Mechanic"
+/datum/outfit/loadout/eng
+	name = "Engineer"
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/mechanic=1,
-		/obj/item/clothing/suit/apron/overalls=1,
-		/obj/item/clothing/head/hardhat/dblue=1,
+		/obj/item/clothing/under/color/white/f13/ncr_eng=1,
+		/obj/item/clothing/shoes/f13/military/ncr=1,
 		/obj/item/clothing/shoes/workboots=1,
 		/obj/item/storage/belt/utility/full/engi=1,
 		/obj/item/clothing/glasses/welding=1,
 		/obj/item/book/granter/trait/techno
 		)
 
-/datum/outfit/loadout/offduty
-	name = "Off Duty"
+/datum/outfit/loadout/doc
+	name = "Doctor"
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/cowboyt=1,
-		/obj/item/clothing/suit/det_suit=1,
-		/obj/item/clothing/shoes/f13/military/ncr=1,
-		/obj/item/clothing/gloves/f13/ncr=1,
-		/obj/item/kitchen/knife/combat=1
+		/obj/item/reagent_containers/medspray/synthflesh=1,
+		/obj/item/healthanalyzer/advanced=1,
+		/obj/item/clothing/mask/surgical=1,
+		/obj/item/clothing/gloves/color/latex/nitrile=1,
+		/obj/item/clothing/glasses/hud/health=1,
+		/obj/item/clothing/suit/armor/f13/ncrarmor/labcoat=1,
+		/obj/item/storage/firstaid/regular=1,
 		)
 
 /*
