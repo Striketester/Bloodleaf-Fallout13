@@ -682,7 +682,7 @@
 				/obj/item/gun/ballistic/automatic/marksman/servicerifle/varmint,
 				/obj/item/ammo_box/magazine/m556/rifle/small,
 				/obj/item/ammo_box/magazine/m556/rifle/small)
-	
+
 	var/loot12 = list(
 				/obj/item/gun/ballistic/revolver/m29/snub,
 				/obj/item/ammo_box/m44
@@ -913,7 +913,6 @@
 				)
 
 	var/loot13 = list(
-				/obj/item/gun/energy/ionrifle,
 				/obj/item/stock_parts/cell/ammo/mfc,
 				""
 				)
@@ -929,7 +928,7 @@
 				""
 				)
 	var/loot16 = list(
-				/obj/item/gun/ballistic/automatic/type93,	
+				/obj/item/gun/ballistic/automatic/type93,
 				/obj/item/ammo_box/magazine/m556/rifle/assault,
 				/obj/item/ammo_box/magazine/m556/rifle/assault
 				)
@@ -1467,7 +1466,7 @@
 	name = "gun comps spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
-	loot = list(		
+	loot = list(
 		/obj/item/advanced_crafting_components/flux,
 		/obj/item/advanced_crafting_components/lenses,
 		/obj/item/advanced_crafting_components/conductors,

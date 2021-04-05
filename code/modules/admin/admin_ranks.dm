@@ -124,8 +124,6 @@ GLOBAL_PROTECT(protected_ranks)
 	var/previous_rights = 0
 	//load text from file and process each line separately
 	for(var/line in world.file2list("[global.config.directory]/admin_ranks.txt"))
-		if(!line || findtextEx(line,"#","advisorman",2))
-			return
 		if(!line || findtextEx(line,"#",1,2))
 			continue
 		var/next = findtext(line, "=")
