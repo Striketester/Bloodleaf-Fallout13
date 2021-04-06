@@ -928,9 +928,18 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	density = TRUE
 	anchored = TRUE
+	var/is_pa = TRUE
 	var/emped = 0
 	var/requires_training = TRUE
 	var/obj/item/tank/jetpack/suit/jetpack = null
+
+/obj/item/clothing/suit/armor/f13/power_armor/proc/upgraded(mob/living/carbon/human/user)
+	. =..()
+	slowdown = 0.4 //+0.1 from helmet = total 0.5
+	requires_training = TRUE
+	armor = armor.modifyRating("melee" = 65, "bullet" = 60, "laser" = 45, "energy" = 55, "bomb" = 60, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+	to_chat(user, "<span class='notice'>You install the hydraulics into the [src].</span>")
+
 /obj/item/clothing/suit/armor/f13/power_armor/Initialize()
 	. = ..()
 	interaction_flags_item &= ~INTERACT_ITEM_ATTACK_HAND_PICKUP
@@ -990,7 +999,7 @@
 			var/datum/action/A = X
 			A.Remove(user)
 	return ..()
-/obj/item/clothing/suit/space/hardsuit/power_armor/equipped(mob/user, slot)
+/obj/item/clothing/suit/armor/f13/power_armor/equipped(mob/user, slot)
 	. = ..()
 	var/mob/living/carbon/human/H = user
 	H.add_trait(TRAIT_STUNIMMUNE)
@@ -1012,6 +1021,12 @@
 				emped = 0
 
 /obj/item/clothing/suit/armor/f13/power_armor/attackby(obj/item/I, mob/user, params)
+	if ((istype(I, /obj/item/pa_hydraulics) && src.requires_training == FALSE))
+		var/mob/living/carbon/human/H
+		if (do_after(user, 12 SECONDS, target = user) && H.wear_suit != src)
+			upgraded()
+			qdel(I)
+			return
 	if(istype(I, /obj/item/tank/jetpack/suit))
 		if(jetpack)
 			to_chat(user, "<span class='warning'>[src] already has a jetpack installed.</span>")
@@ -1037,13 +1052,6 @@
 		jetpack = null
 		to_chat(user, "<span class='notice'>You successfully remove the jetpack from [src].</span>")
 		return
-	else if ((istype(I, /obj/item/pa_hydraulics) && src.requires_training == FALSE))
-		var/mob/living/carbon/human/H
-		if (do_after(user, 12 SECONDS, target = user) && H.wear_suit != src)
-			to_chat(user, "<span class='notice'>You install the hydraulics into the [src].</span>")
-			src.slowdown = 0.4
-			src.armor = armor.modifyRating("melee" = 65, "bullet" = 60, "laser" = 45, "energy" = 55, "bomb" = 60, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
-			src.requires_training = TRUE
 	return ..()
 /obj/item/clothing/suit/armor/f13/power_armor/proc/GetInside(mob/living/carbon/human/user)
 	if(!istype(user))

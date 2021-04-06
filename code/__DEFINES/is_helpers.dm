@@ -152,6 +152,8 @@
 
 #define ismecha(A) (istype(A, /obj/mecha))
 
+#define is_pa(A) (istype(A, /obj/item/clothing/suit/armor/f13/power_armor))
+
 #define is_cleanable(A) (istype(A, /obj/effect/decal/cleanable) || istype(A, /obj/effect/rune)) //if something is cleanable
 
 #define is_acidrain_cleanable(A) (istype(A, /obj/effect/decal/cleanable) || istype(A, /obj/effect/rune) || istype(A, /obj/item/ammo_casing)) //if something is cleaned by acid rain

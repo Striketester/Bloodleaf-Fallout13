@@ -19,6 +19,7 @@
 	taunt_chance = 25
 	speed = -1
 	see_in_dark = 8
+	turns_per_move = 2
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 4,
 							/obj/item/stack/sheet/animalhide/deathclaw = 2,
 							/obj/item/stack/sheet/bone = 4)
@@ -28,9 +29,9 @@
 	maxHealth = 550
 	health = 550
 	obj_damage = 500
-	armour_penetration = 40
-	melee_damage_lower = 60
-	melee_damage_upper = 65
+	armour_penetration = 35
+	melee_damage_lower = 30
+	melee_damage_upper = 35
 	attacktext = "claws"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	friendly = "hugs"
@@ -62,9 +63,9 @@
 	maxHealth = 750
 	health = 750
 	stat_attack = UNCONSCIOUS
-	melee_damage_lower = 76
-	melee_damage_upper = 78
-	armour_penetration = 45
+	melee_damage_lower = 46
+	melee_damage_upper = 48
+	armour_penetration = 40
 	color = rgb(95,104,94)
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
 							/obj/item/stack/sheet/animalhide/deathclaw = 3)
@@ -76,9 +77,9 @@
 	health = 1500
 	color = "#FFFF00"
 	stat_attack = UNCONSCIOUS
-	melee_damage_lower = 80
-	melee_damage_upper = 85
-	armour_penetration = 65
+	melee_damage_lower = 60
+	melee_damage_upper = 65
+	armour_penetration = 45
 
 /mob/living/simple_animal/hostile/deathclaw/legendary/death(gibbed)
 	var/turf/T = get_turf(src)
