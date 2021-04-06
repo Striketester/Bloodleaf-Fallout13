@@ -933,7 +933,7 @@
 	var/requires_training = TRUE
 	var/obj/item/tank/jetpack/suit/jetpack = null
 
-/obj/item/clothing/suit/armor/f13/power_armor/upgraded(mob/living/carbon/human/user)
+/obj/item/clothing/suit/armor/f13/power_armor/proc/upgraded(mob/living/carbon/human/user)
 	. =..()
 	slowdown = 0.4 //+0.1 from helmet = total 0.5
 	requires_training = TRUE
