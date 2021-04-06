@@ -143,16 +143,18 @@
 	a_intent = INTENT_HARM
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
-	faction = list("enclave")
+	faction = list("Enclave")
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("For the Enclave!", "Stars and Stripes!", "Liberty or death!")
+	speak = list("For America!", "Stars and Stripes!", "Liberty or death!")
 	speak_emote = list("pulls out a weapon", "shouts")
 	speak_chance = 0
 
 /obj/effect/mob_spawn/human/corpse/enclavescientist
 	name = "enclave scientist"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/radiation
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -164,6 +166,8 @@
 
 /obj/effect/mob_spawn/human/corpse/enclave/soldier_ca
 	name = "enclave soldier"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/military
@@ -173,7 +177,9 @@
 	//back = /obj/item/weapon/storage/backpack
 
 /obj/effect/mob_spawn/human/corpse/enclave/soldier
-	name = "nclave advanced soldier"
+	name = "Enclave advanced soldier"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/military
@@ -203,12 +209,12 @@
 	icon_gib = "enclave_soldier"
 	maxHealth = 750
 	health = 750
-	melee_damage_lower = 55
-	melee_damage_upper = 55
-	extra_projectiles = 5 //6 projectiles. oh lord.
+	melee_damage_lower = 35
+	melee_damage_upper = 35
+	extra_projectiles = 0 //6 projectiles. oh lord.
 	retreat_distance = 3
 	minimum_distance = 5
-	ranged_cooldown_time = 12
+	ranged_cooldown_time = 8
 	loot = list(/obj/effect/mob_spawn/human/corpse/enclave/soldier)
 	healable = 1
 	ranged = 1
@@ -274,6 +280,8 @@
 
 /obj/effect/mob_spawn/human/corpse/bs
 	name = "Brotherhood Knight"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/combat/brotherhood
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -317,6 +325,8 @@
 
 /obj/effect/mob_spawn/human/corpse/bs/paladin
 	name = "Brotherhood Paladin"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/bdu
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	shoes = /obj/item/clothing/shoes/f13/military
@@ -363,6 +373,8 @@
 
 /obj/effect/mob_spawn/human/corpse/ncr
 	name = "NCR Trooper"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
@@ -384,9 +396,11 @@
 	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
 	healable = 1
 	ranged = 1
+	ranged_cooldown_time = 4
 	projectiletype = /obj/item/projectile/bullet/F13/c556Bullet
 	projectilesound = 'sound/weapons/garandshot.ogg'
 	casingtype = /obj/item/ammo_casing/F13/a556
+	extra_projectiles = 2
 	New()
 		..()
 		icon_state = "ncr_trooper[rand(1,5)]"
@@ -406,9 +420,11 @@
 	health = 200
 	healable = 1
 	ranged = 1
+	ranged_cooldown_time = 4
 	projectiletype = /obj/item/projectile/bullet/F13/c556Bullet
 	projectilesound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	casingtype = /obj/item/ammo_casing/a556
+	extra_projectiles = 4
 	New()
 		..()
 		icon_state = "ncr_sergeant[rand(1,3)]"
@@ -416,6 +432,8 @@
 		icon_dead = "[icon_state]_d"
 /obj/effect/mob_spawn/human/corpse/ncr/sergeant
 	name = "NCR Sergeant"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
@@ -426,8 +444,8 @@
 	//back = /obj/item/weapon/storage/backpack
 
 /mob/living/simple_animal/hostile/legion
-	name = "Legion"
-	desc = "Just a Legion"
+	name = "Recruit Legioniary"
+	desc = "Just a Legionionary"
 	icon_state = "legion_prime"
 	icon_living = "legion_prime"
 	icon_dead = "legion_prime"
@@ -437,6 +455,7 @@
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
+	ranged_cooldown_time = 5
 	speed = 1
 	stat_attack = 1
 	robust_searching = 1
@@ -451,16 +470,18 @@
 	loot = list(/obj/effect/mob_spawn/human/corpse/legion)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
-	faction = list("hostile")
+	faction = list("Legion")
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = 1
-	speak = list("Ave, true to Caesar.", "True to Caesar.", "Ave, Amicus.", "The new slave girls are quite beautiful.", "Give me cause, Profligate.", "Degenerates like you belong on a cross.")
+	speak = list("Ave, true to Caesar.", "True to Caesar.", "Ave, Amicus.", "Give me cause, Profligate.", "Degenerates like you belong on a cross.")
 	speak_emote = list("says")
 	speak_chance = 1
 
 /obj/effect/mob_spawn/human/corpse/legion
 	name = "Legion Prime"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/legion/recruit
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
@@ -479,6 +500,7 @@
 	icon_gib = "legion_prime"
 	retreat_distance = 5
 	minimum_distance = 5
+	ranged_cooldown_time = 2
 	loot = list(/obj/effect/mob_spawn/human/corpse/legion)
 	healable = 1
 	ranged = 1
@@ -487,14 +509,15 @@
 	casingtype = /obj/item/ammo_casing/F13/m308
 
 /mob/living/simple_animal/hostile/legion/decan
-	name = "Legion Decan"
-	desc = "Just a Legion Decan"
+	name = "Legion Prime Decanus"
+	desc = "Just a Legion Decanus"
 	icon_state = "legion_decan"
 	icon_living = "legion_decan"
 	icon_dead = "legion_decan"
 	icon_gib = "legion_decan"
 	retreat_distance = 5
 	minimum_distance = 5
+	ranged_cooldown_time = 2
 	loot = list(/obj/effect/mob_spawn/human/corpse/legion/decan)
 	maxHealth = 225
 	health = 225
@@ -503,9 +526,12 @@
 	projectiletype = /obj/item/projectile/bullet/F13/c308mmBullet
 	projectilesound = 'sound/weapons/garandshot.ogg'
 	casingtype = /obj/item/ammo_casing/F13/m308
+	extra_projectiles = 2
 
 /obj/effect/mob_spawn/human/corpse/legion/decan
-	name = "Legion Decan"
+	name = "Legion Prime Decanus"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/legion/vet
 	shoes = /obj/item/clothing/shoes/f13/military/legionleather
@@ -582,6 +608,8 @@
 
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Raider"
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/tribal
 	shoes = /obj/item/clothing/shoes/f13/rag
@@ -623,6 +651,8 @@
 	ranged = 0
 
 /obj/effect/mob_spawn/human/corpse/raider/tribal
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/raider/sadist
 	shoes = /obj/item/clothing/shoes/f13/rag
@@ -648,6 +678,8 @@
 	ranged = 0
 
 /obj/effect/mob_spawn/human/corpse/raider/baseball
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/raider/yankee
 	shoes = /obj/item/clothing/shoes/f13/rag
@@ -676,6 +708,8 @@
 	casingtype = /obj/item/ammo_casing/m44
 
 /obj/effect/mob_spawn/human/corpse/raider/biker
+	facial_hair_style = "Shaved"
+	hair_style = "Short Hair"
 	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/slam
 	shoes = /obj/item/clothing/shoes/f13/rag

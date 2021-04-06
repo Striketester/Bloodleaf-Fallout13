@@ -489,6 +489,8 @@
 	var/atom/A = parent
 	if(ismob(M)) //all the check for item manipulation are in other places, you can safely open any storages as anything and its not buggy, i checked
 		A.add_fingerprint(M)
+		if(is_pa(M.loc)) // stops inventory actions for PA hopefully
+			return FALSE
 		if(!over_object)
 			return FALSE
 		if(ismecha(M.loc)) // stops inventory actions in a mech

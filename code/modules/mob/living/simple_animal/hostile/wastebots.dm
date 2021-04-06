@@ -68,13 +68,13 @@
 	icon_dead = "gib7"
 	health = 200
 	maxHealth = 200
-	melee_damage_lower = 72
-	melee_damage_upper = 72
+	melee_damage_lower = 32
+	melee_damage_upper = 32
 	attack_sound = 'sound/items/welder.ogg'
 	attacktext = "shoots a burst of flame at"
 	projectilesound = 'sound/weapons/laser.ogg'
 	projectiletype = /obj/item/projectile/plasma
-	extra_projectiles = 2
+	extra_projectiles = 0
 	ranged = TRUE
 	retreat_distance = 2
 	minimum_distance = 2
